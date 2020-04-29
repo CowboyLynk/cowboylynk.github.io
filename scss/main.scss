@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+// Override Bulma variables
+$blue: #3273DC;
+$grey-light: #B5B5B5;
+$grey: #7A7A7A;
+$grey-dark: #4A4A4A;
+$link: $grey;
+$link-hover: $grey-dark;
+
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.html {
+  background-color: #ff6859;
+}
+
+.blur {
+  backdrop-filter: blur(8px); // This be the blur
+  position:fixed;
+  padding:0;
+  margin:0;
+  top:0;
+  left:0;
+
+  width: 100%;
+  height: 100%;
+  background:rgba(255,255,255,0.5);
+}
+
+#hero_title {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+@import "../bulma/bulma.sass";
+
