@@ -1,6 +1,14 @@
 @charset "utf-8";
 @import "siteWide";
 
+.icon i {
+  color: $grey;
+}
+
+.icon i:hover {
+  color: $grey-dark;
+}
+
 .card {
   border: 0;
   -webkit-transition-duration: 0.4s; /* Safari */
