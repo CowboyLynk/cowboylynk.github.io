@@ -1,4 +1,4 @@
-function updateModalProject(projectID) {
+function showModalProject(projectID) {
     $(function(){
         let blur =  $("#blur");
         blur.show();
@@ -7,21 +7,31 @@ function updateModalProject(projectID) {
 
         let project = $("#project");
         project.load("projects/" + projectID + ".html");
-        $("#project_container").toggleClass("loading", false);
+        $("#project_box").toggleClass("loading", false);
+    });
+}
+
+function hideModalProject() {
+    let blur = $("#blur");
+    $(blur).toggleClass("loading", true);
+    let projectBox = $("#project_box");
+    projectBox.toggleClass("loading", true);
+    projectBox.one('transitionend', function(e) {
+        $(blur).hide();
     });
 }
 
 $(function() {
     $("div.card").on("click", function(e){
-        updateModalProject(this.id);
+        showModalProject(this.id);
 
         e.preventDefault(); //to prevent any other unwanted behavior clicking the div might cause
     });
 
     $("#blur").on("click", function(e){
-        $(this).hide();
-        $(this).toggleClass("loading", true);
-        $("#project_container").toggleClass("loading", true);
-        // e.preventDefault(); //to prevent any other unwanted behavior clicking the div might cause
+        if (e.target === this) {
+            hideModalProject();
+            e.preventDefault(); //to prevent any other unwanted behavior clicking the div might cause
+        }
     })
 });

@@ -41,25 +41,27 @@ body {
   opacity: 0;
 }
 
-#project_container {
+#project_box {
   -webkit-transition-duration: 1s;
   transition-duration: 1s;
-}
-
-#project_container.loading {
-  -webkit-transform: translate(0, 100vh);
-  transform: translate(0, 100vh);
-}
-
-#project_box {
   border-radius: 25px;
   overflow: hidden;
   padding: 0;
   margin: 3% 20%;
 }
 
+#project_box.loading {
+  -webkit-transform: translate(0, 100vh);
+  transform: translate(0, 100vh);
+}
+
 #project {
   background-color: white;
+}
+
+#close_project {
+  position: absolute;
+  margin: 10px;
 }
 
 /*! bulma.io v0.8.2 | MIT License | github.com/jgthms/bulma */

@@ -33,47 +33,46 @@
 
 <!-- Cards -->
 <section class="section" style="padding-top: 0">
-    <div class="container">
-        <div class="columns">
-            <div class="column is-one-quarter">
-                <div class="card" id="gazer">
-                    <div class="card-image">
-                        <figure class="image is-4by3">
-                            <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-                        </figure>
-                    </div>
-                    <div class="card-content">
-                        <div class="media">
-                            <div class="media-content">
-                                <p class="title is-4">Gazer</p>
-                                <div class="tags">
-                                    <span class="tag">Swift</span>
-                                    <span class="tag">OpenCV</span>
-                                    <span class="tag">ARKit</span>
-                                </div>
+<div class="container">
+    <div class="columns">
+        <div class="column is-one-quarter">
+            <div class="card" id="gazer">
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-content">
+                            <p class="title is-4">Gazer</p>
+                            <div class="tags subtitle">
+                                <span class="tag">Swift</span>
+                                <span class="tag">OpenCV</span>
+                                <span class="tag">ARKit</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="column is-one-quarter">
-                <div class="card" id="planit">
-                    <div class="card-image">
-                        <figure class="image is-4by3">
-                            <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-                        </figure>
-                    </div>
-                    <div class="card-content">
-                        <div class="media">
-                            <div class="media-content">
-                                <p class="title is-4">Plan It!</p>
-                                <div class="tags">
-                                    <span class="tag">Django</span>
-                                    <span class="tag">Python</span>
-                                    <span class="tag">HTML</span>
-                                    <span class="tag">CSS</span>
-                                    <span class="tag">JS</span>
-                                </div>
+        </div>
+        <div class="column is-one-quarter">
+            <div class="card" id="planit">
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-content">
+                            <p class="title is-4">Plan It!</p>
+                            <div class="tags subtitle">
+                                <span class="tag">Django</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JS</span>
                             </div>
                         </div>
                     </div>
@@ -81,14 +80,15 @@
             </div>
         </div>
     </div>
+</div>
 </section>
 
+<!-- Modal Popup -->
 <section class="section loading" id="blur">
-    <div class="container loading" id="project_container">
-        <div class="box" id="project_box">
-            <div id="project"></div>
-        </div>
-    </div>
+<div class="box loading" id="project_box">
+    <a class="delete" id="close_project" onclick="hideModalProject()"></a>
+    <div id="project"></div>
+</div>
 </section>
 
 <!-- load scripts -->
