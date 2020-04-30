@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="scss/main.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Kanit">
     <script src="https://kit.fontawesome.com/f55cf00dfe.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
 
@@ -35,8 +36,8 @@
 <section class="section" style="padding-top: 0">
     <div class="container">
         <div class="columns">
-             <div class="column is-one-quarter">
-                <div class="card" id="gazer">
+            <div class="column is-one-quarter">
+                <div class="card open-overlay" id="gazer">
                     <div class="card-image">
                         <figure class="image is-4by3">
                             <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
@@ -60,7 +61,7 @@
                 </div>
             </div>
             <div class="column is-one-quarter">
-                <div class="card" id="planit">
+                <div class="card open-overlay" id="planit">
                     <div class="card-image">
                         <figure class="image is-4by3">
                             <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
@@ -88,15 +89,17 @@
     </div>
 </section>
 
-<!--<div class="blur"></div>-->
-<!--<div>-->
-<!--    <object type="text/html" data="http://validator.w3.org/" width="800px" height="600px" style="overflow:auto;border:5px ridge blue">-->
-<!--    </object>-->
-<!--</div>-->
-<!--<script>-->
-<!--        $("#mydiv")-->
-<!--            .html('<object data="http://your-website-domain"/>');-->
-<!--</script>-->
+<div class="overlay close-overlay" id="blur" aria-hidden="true">
+    <div class="box" id="modal_project">
+        <iframe id="modal_project_content" src="projects/planit.html" sandbox="allow-same-origin" width="100%"></iframe>
+<!--        <object type="text/html" data="projects/planit.html" width="100%" height="100%" style="height: 100%"></object>-->
+    </div>
+</div>
 
+
+<!-- load scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/main.js" charset="UTF-8"></script>
+<!-- end load scripts -->
 </body>
 </html>
