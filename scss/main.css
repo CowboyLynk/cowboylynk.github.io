@@ -3,61 +3,10 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
-.html {
-  background-color: #ff6859;
-}
-
-#blur {
-  -webkit-transition-duration: 0.4s;
-  /* Safari */
-  transition-duration: 0.4s;
-  backdrop-filter: blur(4px);
-  position: fixed;
-  padding: 0;
-  margin: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-}
-
-#hero_title {
+.title {
   font-family: "Kanit", sans-serif;
   font-weight: 700;
   font-style: italic;
-}
-
-#modal_project {
-  border-radius: 25px;
-  margin: 5% 20%;
-  padding: 0;
-  overflow: hidden;
-  max-height: 100%;
-  height: auto;
-}
-
-/* to the body element */
-.noscroll {
-  overflow-y: hidden;
-  height: 100vh;
-}
-
-.overlay {
-  position: fixed;
-  overflow-y: scroll;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-[aria-hidden=true] {
-  display: none;
-}
-
-[aria-hidden=false] {
-  display: block;
 }
 
 .card {
@@ -71,6 +20,46 @@ body {
 .card:hover {
   box-shadow: 0 5px 50px 0 rgba(0, 0, 0, 0.2);
   transform: scale(1.01);
+}
+
+#blur {
+  position: fixed;
+  overflow-y: scroll;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: none;
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+  opacity: 1;
+}
+
+#blur.loading {
+  opacity: 0;
+}
+
+#project_container {
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+}
+
+#project_container.loading {
+  -webkit-transform: translate(0, 100vh);
+  transform: translate(0, 100vh);
+}
+
+#project_box {
+  border-radius: 25px;
+  overflow: hidden;
+  padding: 0;
+  margin: 3% 20%;
+}
+
+#project {
+  background-color: white;
 }
 
 /*! bulma.io v0.8.2 | MIT License | github.com/jgthms/bulma */
@@ -1080,11 +1069,11 @@ a.has-text-danger:hover, a.has-text-danger:focus {
 }
 
 .has-text-grey-light {
-  color: #B5B5B5 !important;
+  color: #EDEDEDED !important;
 }
 
 .has-background-grey-light {
-  background-color: #B5B5B5 !important;
+  background-color: #EDEDEDED !important;
 }
 
 .has-text-grey-lighter {
@@ -1575,7 +1564,7 @@ a.box:active {
   margin-right: calc(-0.5em - 1px);
 }
 .button:hover, .button.is-hovered {
-  border-color: #B5B5B5;
+  border-color: #EDEDEDED;
   color: #4A4A4A;
 }
 .button:focus, .button.is-focused {
@@ -3750,7 +3739,7 @@ a.tag:hover {
   color: rgba(54, 54, 54, 0.3);
 }
 .select select:hover, .textarea:hover, .input:hover, .select select.is-hovered, .is-hovered.textarea, .is-hovered.input {
-  border-color: #B5B5B5;
+  border-color: #EDEDEDED;
 }
 .select select:focus, .textarea:focus, .input:focus, .select select.is-focused, .is-focused.textarea, .is-focused.input, .select select:active, .textarea:active, .input:active, .select select.is-active, .is-active.textarea, .is-active.input {
   border-color: #7A7A7A;
@@ -4790,7 +4779,7 @@ a.tag:hover {
   pointer-events: none;
 }
 .breadcrumb li + li::before {
-  color: #B5B5B5;
+  color: #EDEDEDED;
   content: "/";
 }
 .breadcrumb ul,
@@ -6540,7 +6529,7 @@ body.has-spaced-navbar-fixed-bottom {
 .pagination-previous:hover,
 .pagination-next:hover,
 .pagination-link:hover {
-  border-color: #B5B5B5;
+  border-color: #EDEDEDED;
   color: #4A4A4A;
 }
 .pagination-previous:focus,
@@ -6577,7 +6566,7 @@ body.has-spaced-navbar-fixed-bottom {
 }
 
 .pagination-ellipsis {
-  color: #B5B5B5;
+  color: #EDEDEDED;
   pointer-events: none;
 }
 
@@ -6937,7 +6926,7 @@ label.panel-block:hover {
 }
 .tabs.is-toggle a:hover {
   background-color: whitesmoke;
-  border-color: #B5B5B5;
+  border-color: #EDEDEDED;
   z-index: 2;
 }
 .tabs.is-toggle li + li {

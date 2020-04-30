@@ -1,67 +1,5 @@
 @charset "utf-8";
-
-// Override Bulma variables
-$blue: #3273DC;
-$grey-light: #B5B5B5;
-$grey: #7A7A7A;
-$grey-dark: #4A4A4A;
-$link: $grey;
-$link-hover: $grey-dark;
-
-
-body {
-  font-family: 'Open Sans', sans-serif;
-}
-
-.html {
-  background-color: #ff6859;
-}
-
-#blur {
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-  backdrop-filter: blur(4px);
-  position:fixed;
-  padding:0;
-  margin:0;
-  top:0;
-  left:0;
-
-  width: 100%;
-  height: 100%;
-  overflow:auto
-}
-
-#hero_title {
-  font-family: 'Kanit', sans-serif;
-  font-weight: 700;
-  font-style: italic;
-}
-
-#modal_project {
-  border-radius: 25px;
-  margin: 5% 20%;
-  padding: 0;
-  overflow: hidden;
-  max-height: 100%;
-  height:auto;
-}
-
-
-/* to the body element */
-.noscroll {
-  overflow-y:hidden;
-  height:100vh;
-}
-
-.overlay {
-   position: fixed;
-   overflow-y: scroll;
-   top: 0; right: 0; bottom: 0; left: 0; }
-
-[aria-hidden="true"] { display: none; }
-[aria-hidden="false"] { display: block; }
-
+@import "siteWide";
 
 .card {
   border: 0;
@@ -73,6 +11,44 @@ body {
   box-shadow: 0 5px 50px 0 rgba(0,0,0,0.2);
   transform: scale(1.01);
 }
+
+#blur {
+  position: fixed;
+  overflow-y: scroll;
+  top: 0; right: 0; bottom: 0; left: 0;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: none;
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+  opacity: 1;
+}
+
+#blur.loading {
+  opacity: 0;
+}
+
+#project_container {
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+}
+
+#project_container.loading {
+  -webkit-transform: translate(0,100vh);
+  transform: translate(0, 100vh);
+}
+
+#project_box {
+  border-radius: 25px;
+  overflow: hidden;
+  padding: 0;
+  margin: 3% 20%;
+}
+
+#project {
+  background-color: white;
+}
+
 
 @import "../bulma/bulma.sass";
 

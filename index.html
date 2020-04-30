@@ -6,14 +6,13 @@
     <link rel="stylesheet" href="scss/main.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Kanit">
     <script src="https://kit.fontawesome.com/f55cf00dfe.js" crossorigin="anonymous"></script>
-
 </head>
 <body>
 
 <!-- Title -->
 <section class="section">
     <div class="container">
-        <h1 class="title" id="hero_title">
+        <h1 class="title">
             COWBOY LYNK
         </h1>
         <h2 class="subtitle">
@@ -37,7 +36,7 @@
     <div class="container">
         <div class="columns">
             <div class="column is-one-quarter">
-                <div class="card open-overlay" id="gazer">
+                <div class="card" id="gazer">
                     <div class="card-image">
                         <figure class="image is-4by3">
                             <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
@@ -47,21 +46,18 @@
                         <div class="media">
                             <div class="media-content">
                                 <p class="title is-4">Gazer</p>
-                                <p class="subtitle is-6">Swift, OpenCV, ARKit, Agora</p>
+                                <div class="tags">
+                                    <span class="tag">Swift</span>
+                                    <span class="tag">OpenCV</span>
+                                    <span class="tag">ARKit</span>
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="content">
-                            Gaze-assisted video chat. Gazer tracks your eye movements and allows for a focus mode
-                            mutes anyone you're not looking at.
-                            <br>
-                            <time datetime="2020-4-1">Apr 2020</time>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="column is-one-quarter">
-                <div class="card open-overlay" id="planit">
+                <div class="card" id="planit">
                     <div class="card-image">
                         <figure class="image is-4by3">
                             <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
@@ -71,16 +67,14 @@
                         <div class="media">
                             <div class="media-content">
                                 <p class="title is-4">Plan It!</p>
-                                <p class="subtitle is-6">Django, Python, HTML, CSS, JS</p>
+                                <div class="tags">
+                                    <span class="tag">Django</span>
+                                    <span class="tag">Python</span>
+                                    <span class="tag">HTML</span>
+                                    <span class="tag">CSS</span>
+                                    <span class="tag">JS</span>
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="content">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-                            <a href="#">#css</a> <a href="#">#responsive</a>
-                            <br>
-                            <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
                         </div>
                     </div>
                 </div>
@@ -89,17 +83,17 @@
     </div>
 </section>
 
-<div class="overlay close-overlay" id="blur" aria-hidden="true">
-    <div class="box" id="modal_project">
-        <iframe id="modal_project_content" src="projects/planit.html" sandbox="allow-same-origin" width="100%"></iframe>
-<!--        <object type="text/html" data="projects/planit.html" width="100%" height="100%" style="height: 100%"></object>-->
+<section class="section loading" id="blur">
+    <div class="container loading" id="project_container">
+        <div class="box" id="project_box">
+            <div id="project"></div>
+        </div>
     </div>
-</div>
-
+</section>
 
 <!-- load scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="js/main.js" charset="UTF-8"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="js/main.js" charset="UTF-8"></script>
 <!-- end load scripts -->
 </body>
 </html>
