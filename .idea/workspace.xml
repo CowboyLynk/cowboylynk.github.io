@@ -2,24 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1375ea5-f37e-4f66-8b5b-52b7f79c7043" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/js/project.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/planit/planit-screenshot-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/planit/planit-screenshot-1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/planit/planit-screenshot-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/planit/planit-screenshot-2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/project.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/project.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/gazer.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/planit.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/scribr.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/main.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/main.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/project.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/project.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/project.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/siteWide.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/siteWide.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/siteWide.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/planit.html" beforeDir="false" afterPath="$PROJECT_DIR$/planit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scribr.html" beforeDir="false" afterPath="$PROJECT_DIR$/scribr.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +71,7 @@
       <workItem from="1588258912499" duration="18006000" />
       <workItem from="1588287062846" duration="192000" />
       <workItem from="1588341352534" duration="819000" />
-      <workItem from="1588345375295" duration="2791000" />
+      <workItem from="1588345375295" duration="5625000" />
     </task>
     <servers />
   </component>

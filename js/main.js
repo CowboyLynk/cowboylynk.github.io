@@ -7,6 +7,12 @@ function showModalProject(projectID) {
     let project = $("#project");
     project.load(projectID + ".html");
     $("#project_box").toggleClass("loading", false);
+
+    // Set the url
+    let searchParams = new URLSearchParams(window.location.search);
+    searchParams.set('pid', projectID);
+    console.log(location.pathname);
+    window.history.replaceState({}, null, location.pathname + '?pid=' + projectID);
 }
 
 function hideModalProject() {
@@ -17,9 +23,11 @@ function hideModalProject() {
     projectBox.one('transitionend', function(e) {
         $(blur).hide();
     });
+    window.history.replaceState({}, null, location.pathname);
 }
 
 $(function() {
+    // Set up click events
     $("div.card").on("click", function(e){
         showModalProject(this.id);
 
@@ -32,4 +40,11 @@ $(function() {
             e.preventDefault(); //to prevent any other unwanted behavior clicking the div might cause
         }
     })
+
+    // Check id of page
+    let searchParams = new URLSearchParams(window.location.search);
+    if (searchParams.has('pid')) {
+        let pid = searchParams.get('pid');
+        showModalProject(pid);
+    }
 });
