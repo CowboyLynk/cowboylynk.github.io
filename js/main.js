@@ -1,14 +1,12 @@
 function showModalProject(projectID) {
-    $(function(){
-        let blur =  $("#blur");
-        blur.show();
-        blur.scrollTop(0);
-        blur.toggleClass("loading", false);
+    let blur =  $("#blur");
+    blur.show();
+    blur.scrollTop(0);
+    blur.toggleClass("loading", false);
 
-        let project = $("#project");
-        project.load("projects/" + projectID + ".html");
-        $("#project_box").toggleClass("loading", false);
-    });
+    let project = $("#project");
+    project.load(projectID + ".html");
+    $("#project_box").toggleClass("loading", false);
 }
 
 function hideModalProject() {

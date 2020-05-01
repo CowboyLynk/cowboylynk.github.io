@@ -1,0 +1,26 @@
+#project_info {
+  padding: 24px;
+}
+
+#project_info p {
+  margin-bottom: 1em;
+}
+
+#project_info h2 {
+  margin-bottom: 0.2em;
+}
+
+.carousel-cell {
+  width: 80%;
+  margin: 0 20%;
+}
+
+.flickity-button {
+  background: rgba(102, 102, 102, 0.3);
+}
+
+.flickity-button:hover {
+  background: rgba(102, 102, 102, 0.6);
+}
+
+/*# sourceMappingURL=project.css.map */

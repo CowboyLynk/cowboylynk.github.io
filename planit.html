@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Planit</title>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="css/project.css">
 </head>
 <body>
 <div class="hero is-small is-primary is-bold">
@@ -36,14 +38,21 @@
         </p>
 
         <h2 class="subtitle is-4">Screenshots</h2>
-        <figure class="image">
-            <img src="images/planit/planit-screenshot-1.png">
-        </figure>
-        <br>
-        <figure class="image">
-            <img src="images/planit/planit-screenshot-2.png">
-        </figure>
+        <div class="main-carousel" data-flickity='{ "fullscreen": true, "pageDots": false }'>
+            <div class="carousel-cell">
+                <figure class="image">
+                    <img src="images/planit/planit-screenshot-1.png">
+                </figure>
+            </div>
+            <div class="carousel-cell">
+                <figure class="image">
+                    <img src="images/planit/planit-screenshot-2.png">
+                </figure>
+            </div>
+        </div>
     </div>
 </section>
+
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </body>
 </html>
