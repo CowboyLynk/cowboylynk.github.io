@@ -1,14 +1,25 @@
 @charset "utf-8";
 @import "siteWide";
 
+// Navigation stuff
 .icon i {
   color: $grey;
 }
-
 .icon i:hover {
   color: $grey-dark;
 }
 
+// Grid
+.element-item {
+  width: 25%;
+  padding: 12px;
+}
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .element-item {
+    width: 100%;
+  }
+}
 .card {
   border: 0;
   -webkit-transition-duration: 0.4s; /* Safari */
@@ -18,6 +29,32 @@
 .card:hover {
   box-shadow: 0 5px 50px 0 rgba(0,0,0,0.2);
   transform: scale(1.01);
+}
+#project_box {
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+  border-radius: 25px;
+  overflow: hidden;
+  padding: 0;
+  margin: 3% 20%;
+}
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  #project_box {
+    margin: 2% 5%;
+  }
+}
+
+#project_box.loading {
+  -webkit-transform: translate(0,100vh);
+  transform: translate(0, 100vh);
+}
+#project {
+  background-color: white;
+}
+#close_project {
+  position: absolute;
+  margin: 10px;
 }
 
 #blur {
@@ -31,34 +68,9 @@
   transition-duration: 1s;
   opacity: 1;
 }
-
 #blur.loading {
   opacity: 0;
 }
-
-#project_box {
-  -webkit-transition-duration: 1s;
-  transition-duration: 1s;
-  border-radius: 25px;
-  overflow: hidden;
-  padding: 0;
-  margin: 3% 20%;
-}
-
-#project_box.loading {
-  -webkit-transform: translate(0,100vh);
-  transform: translate(0, 100vh);
-}
-
-#project {
-  background-color: white;
-}
-
-#close_project {
-  position: absolute;
-  margin: 10px;
-}
-
 
 @import "../bulma/bulma.sass";
 

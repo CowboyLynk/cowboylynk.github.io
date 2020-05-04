@@ -34,7 +34,12 @@
 <!-- Cards -->
 <section class="section" style="padding-top: 0">
 <div class="container">
-    <div class="columns is-multiline" id="project-grid"></div>
+    <div class="button-group filters-button-group">
+        <button class="button is-checked" data-filter="*">All</button>
+        <button class="button" data-filter="[data-category=coding]">Coding</button>
+        <button class="button" data-filter="[data-category=film]">Film</button>
+    </div>
+    <div class="grid" id="project-grid"></div>
 </div>
 </section>
 
@@ -48,11 +53,11 @@
 
 <!-- Card Template -->
 <template id="project-item-template">
-    <div class="column is-one-quarter">
+    <div class="element-item">
         <div class="card" id="project-card">
             <div class="card-image">
                 <figure class="image is-4by3">
-                    <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                    <img id="cover-image" src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
                 </figure>
             </div>
             <div class="card-content">
@@ -70,7 +75,7 @@
 
 <!-- load scripts -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script type="text/javascript" src="json/projects.json"></script>
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 <script src="js/main.js" charset="UTF-8"></script>
 <!-- end load scripts -->
 </body>

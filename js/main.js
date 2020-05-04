@@ -2,35 +2,57 @@ let projects = [
     {
         "name": "Gazer",
         "pid": "gazer",
-        "tags": ["Swift", "Open CV", "ARKit"]
+        "tags": ["Swift", "Open CV", "ARKit"],
+        "category": "coding"
     },
     {
         "name": "Planit",
         "pid": "planit",
-        "tags": ["Django", "Python", "HTML", "JS", "CSS"]
+        "tags": ["Django", "Python", "HTML", "JS", "CSS"],
+        "category": "coding"
     },
     {
         "name": "Scribr",
         "pid": "scribr",
-        "tags": ["Python", "Flask", "FFmpeg"]
+        "tags": ["Python", "Flask", "FFmpeg"],
+        "category": "coding"
+    },
+    {
+        "name": "The Word Game",
+        "pid": "thewordgame",
+        "tags": ["Swift"],
+        "category": "coding"
+    },
+    {
+        "name": "MIT Admissions",
+        "pid": "mitadmissions",
+        "tags": ["Film"],
+        "category": "film",
+        "cover": true
     }
 ];
+
+function filterProjects() {
+
+}
 
 function initProjects() {
     let tbody = document.querySelector('#project-grid');
     let template = document.querySelector('#project-item-template');
-    console.log(projects);
-    console.log(projects.length);
     for (let i = 0; i < projects.length; i++) {
-        console.log("here");
         let project = projects[i];
+        let pid = project["pid"];
+        let name = project["name"];
         let clone = template.content.cloneNode(true);
 
+        let projectContainer = clone.querySelector(".element-item");
+        projectContainer.setAttribute('data-category', project["category"]);
+
         let projectCard = clone.querySelector("#project-card");
-        projectCard.id = project["pid"];
+        projectCard.id = pid;
 
         let projectTitle = clone.querySelector("#project-title");
-        projectTitle.textContent = project["name"];
+        projectTitle.textContent = name;
 
         let tagsContainer = clone.querySelector(".tags");
         let tags = project["tags"];
@@ -39,6 +61,12 @@ function initProjects() {
             tag.className = "tag";
             tag.textContent = tags[j];
             tagsContainer.appendChild(tag);
+        }
+
+        let projectImage = clone.querySelector("#cover-image");
+        if (project["cover"]) {
+            projectImage.src = "images/" + pid + "/cover.png";
+            projectImage.alt = name + "Image";
         }
 
         tbody.appendChild(clone);
@@ -77,6 +105,18 @@ function hideModalProject() {
 $(function() {
     // Init projects
     initProjects();
+    $('.filters-button-group').on( 'click', 'button', function() {
+        let filterValue = $( this ).attr('data-filter');
+        // use filterFn if matches value
+        console.log(filterValue);
+        $grid.isotope({ filter: filterValue });
+    });
+
+    // Set up the grid
+    let $grid = $('.grid').isotope({
+        itemSelector: '.element-item',
+        layoutMode: 'fitRows'
+    });
 
     // Set up click events
     $("div.card").on("click", function(e){
@@ -84,7 +124,6 @@ $(function() {
 
         e.preventDefault(); //to prevent any other unwanted behavior clicking the div might cause
     });
-
     $("#blur").on("click", function(e){
         if (e.target === this) {
             hideModalProject();
@@ -92,7 +131,7 @@ $(function() {
         }
     });
 
-    // Check id of page
+    // Check id of page and load project if necessary
     let searchParams = new URLSearchParams(window.location.search);
     if (searchParams.has('pid')) {
         let pid = searchParams.get('pid');

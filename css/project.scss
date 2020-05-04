@@ -12,9 +12,27 @@
   margin-bottom: 0.2em;
 }
 
+.links a {
+  color: #fff;
+  opacity: 0.8;
+}
+
+.links a:hover {
+  opacity: 1;
+}
+
+.hero.is-warning .links a {
+  color: hsla(0, 0, 0, 0.8);
+  opacity: 0.8;
+}
+
+.hero.is-warning .links a:hover {
+  opacity: 1;
+}
+
 .carousel-cell {
-  width: 80%;
-  margin: 0 20%;
+  width: 100%;
+  margin: 0 10%
 }
 
 .flickity-button {
