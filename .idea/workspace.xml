@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1375ea5-f37e-4f66-8b5b-52b7f79c7043" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/thewordgame.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/project.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/project.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/project.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/project.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/project.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/project.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/planit/planit-screenshot-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/planit/planit-screenshot-2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/planit.html" beforeDir="false" afterPath="$PROJECT_DIR$/planit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gazer.html" beforeDir="false" afterPath="$PROJECT_DIR$/gazer.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +78,11 @@
       <workItem from="1588533152838" duration="938000" />
       <workItem from="1588613945661" duration="27000" />
       <workItem from="1588623356111" duration="24000" />
-      <workItem from="1588623395605" duration="7365000" />
+      <workItem from="1588623395605" duration="7648000" />
+      <workItem from="1588772434631" duration="22000" />
+      <workItem from="1588773512411" duration="48000" />
+      <workItem from="1588854424720" duration="1145000" />
+      <workItem from="1588856862285" duration="575000" />
     </task>
     <servers />
   </component>
