@@ -28,6 +28,10 @@
   opacity: 1;
 }
 
+#hero-image {
+  border-radius: 10px;
+}
+
 .carousel-cell {
   width: 100%;
   margin: 0 10%;

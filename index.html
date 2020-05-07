@@ -10,8 +10,10 @@
 <body>
 
 <!-- Title -->
-<section class="section">
+<section class="section" style="padding-bottom: 2rem">
     <div class="container">
+        <div class="columns is-vcentered">
+            <div class="column">
         <h1 class="title">
             COWBOY LYNK
         </h1>
@@ -28,13 +30,26 @@
                 <i class="fab fa-youtube fa-lg"></i>
             </a>
         </h2>
+            </div>
+            <div class="column" style="text-align: right">
+                <a href="about.html">INFO</a>
+                |
+                <a href="">RESUME</a>
+            </div>
+        </div>
     </div>
 </section>
 
 <!-- Cards -->
 <section class="section" style="padding-top: 0">
 <div class="container">
-    <div class="button-group filters-button-group">
+    <div style="display: inline">
+        Filter:
+    </div>
+    <div class="tags" id="tag-filters" style="display: inline">
+        <span class="tag is-link is-light" id="add-tag-button">+</span>
+    </div>
+    <div class="button-group filters-button-group" style="display: none">
         <button class="button is-checked" data-filter="*">All</button>
         <button class="button" data-filter="[data-category=coding]">Coding</button>
         <button class="button" data-filter="[data-category=film]">Film</button>

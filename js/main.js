@@ -2,13 +2,19 @@ let projects = [
     {
         "name": "Gazer",
         "pid": "gazer",
-        "tags": ["Swift", "Open CV", "ARKit"],
+        "tags": ["Swift", "OpenCV", "ARKit"],
         "category": "coding"
     },
     {
         "name": "Planit",
         "pid": "planit",
-        "tags": ["Django", "Python", "HTML", "JS", "CSS"],
+        "tags": ["Django", "Python", "Javascript"],
+        "category": "coding"
+    },
+    {
+        "name": "MC Ray Tracer",
+        "pid": "raytracer",
+        "tags": ["C++"],
         "category": "coding"
     },
     {
@@ -18,23 +24,30 @@ let projects = [
         "category": "coding"
     },
     {
+        "name": "BioTune",
+        "pid": "biotune",
+        "tags": ["Python"],
+        "category": "coding"
+    },
+    {
         "name": "The Word Game",
         "pid": "thewordgame",
         "tags": ["Swift"],
         "category": "coding"
     },
     {
+        "name": "Pong Stat",
+        "pid": "pongstat",
+        "tags": ["Swift"],
+        "category": "coding"
+    },
+    {
         "name": "MIT Admissions",
         "pid": "mitadmissions",
-        "tags": ["Film"],
-        "category": "film",
-        "cover": true
+        "tags": ["After Effects", "Blender", "C4D"],
+        "category": "coding"
     }
 ];
-
-function filterProjects() {
-
-}
 
 function initProjects() {
     let tbody = document.querySelector('#project-grid');
@@ -64,15 +77,31 @@ function initProjects() {
         }
 
         let projectImage = clone.querySelector("#cover-image");
-        if (project["cover"]) {
-            projectImage.src = "images/" + pid + "/cover.png";
-            projectImage.alt = name + "Image";
-        }
+        projectImage.src = "images/" + pid + "/cover.png";
+        projectImage.alt = name + "Image";
 
         tbody.appendChild(clone);
     }
 }
 
+function addTagFilter(tagName) {
+    let tagID = tagName.toLocaleLowerCase();
+    let tags = $("#tag-filters");
+    let addTagsButton = $("#add-tag-button");
+    let tag = document.createElement("span");
+    tag.classList.add("tag");
+    tag.id = "tag-" + tagID;
+    tag.textContent = tagName;
+    tag.setAttribute("data-id", tagID);
+    let button = document.createElement("div");
+    button.className = "delete is-small";
+    $(button).click(function() {
+        $("#tag-" + tagID).remove();
+    });
+    tag.append(button);
+    addTagsButton.before(tag);
+    // tags.insertBefore(tag, addTagsButton);
+}
 
 function showModalProject(projectID) {
     let blur =  $("#blur");
@@ -107,15 +136,20 @@ $(function() {
     initProjects();
     $('.filters-button-group').on( 'click', 'button', function() {
         let filterValue = $( this ).attr('data-filter');
-        // use filterFn if matches value
-        console.log(filterValue);
-        $grid.isotope({ filter: filterValue });
+        let filterFunc = function() {
+            let name = $(this).find('.name').text();
+            return name.match( /ium$/ );
+        };
+        $grid.isotope({ filter: filterFunc });
     });
 
     // Set up the grid
     let $grid = $('.grid').isotope({
         itemSelector: '.element-item',
-        layoutMode: 'fitRows'
+        layoutMode: 'fitRows',
+        fitRows: {
+            gutter: 0
+        }
     });
 
     // Set up click events
@@ -137,4 +171,7 @@ $(function() {
         let pid = searchParams.get('pid');
         showModalProject(pid);
     }
+
+    addTagFilter("Python");
+    addTagFilter("OpenCV");
 });

@@ -10,9 +10,13 @@
 }
 
 // Grid
+#project-grid {
+  margin: 0 -6px 0 -6px;
+}
 .element-item {
   width: 25%;
-  padding: 12px;
+  padding: 0 6px 12px 6px;
+  //padding: 12px;
 }
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
@@ -36,12 +40,12 @@
   border-radius: 25px;
   overflow: hidden;
   padding: 0;
-  margin: 3% 20%;
+  margin: 20px 20%;
 }
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   #project_box {
-    margin: 2% 5%;
+    margin: 20px 5%;
   }
 }
 
@@ -58,6 +62,7 @@
 }
 
 #blur {
+  padding: 0;
   position: fixed;
   overflow-y: scroll;
   top: 0; right: 0; bottom: 0; left: 0;
