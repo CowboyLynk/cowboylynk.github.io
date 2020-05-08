@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pong Stat</title>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity-fullscreen@1/fullscreen.css">
+    <link rel="stylesheet" href="css/project.css">
+    <style>
+        .carousel-cell {
+            width: 50%;
+            margin: 0 20%
+        }
+    </style>
+</head>
+<body>
+<div class="hero is-small is-primary is-bold">
+    <div class="hero-body">
+        <nav class="columns is-vcentered">
+        <!-- Left side -->
+        <div class="column">
+            <div class="container">
+                <h1 class="title">Pong Stat</span></h1>
+                <h2 class="subtitle">
+                    Beer (or water) pong stats and efficiency tracker
+                </h2>
+                <div class="links">
+                    <a href="https://github.com/CowboyLynk/PongStat" target="_blank">
+                        <i class="fab fa-github fa-md"></i>
+                        Github
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right side -->
+        <div class="column">
+            <figure class="image">
+            <img id="hero-image" src="images/pongstat/hero.png">
+        </figure>
+        </div>
+        </nav>
+    </div>
+</div>
+<section class="section" id="project_info">
+    <div class="container">
+        <h2 class="subtitle is-4">About</h2>
+        <p>
+            You pick the courses you want to take without regard for logistics, and then Planit! figures out what
+            schedules you can take.
+        </p>
+
+        <h2 class="subtitle is-4">Screenshots</h2>
+        <div class="main-carousel" data-flickity='{ "fullscreen": true, "pageDots": false }'>
+            <div class="carousel-cell">
+                <figure class="image">
+                    <img src="images/pongstat/screenshot-1.png">
+                </figure>
+            </div>
+            <div class="carousel-cell">
+                <figure class="image">
+                    <img src="images/pongstat/screenshot-2.png">
+                </figure>
+            </div>
+            <div class="carousel-cell">
+                <figure class="image">
+                    <img src="images/pongstat/screenshot-3.png">
+                </figure>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script src="https://unpkg.com/flickity-fullscreen@1/fullscreen.js"></script>
+</body>
+</html>

@@ -2,9 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Planit</title>
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/flickity-fullscreen@1/fullscreen.css">
+    <title>Biotune</title>
     <link rel="stylesheet" href="css/project.css">
 </head>
 <body>
@@ -14,17 +12,12 @@
         <!-- Left side -->
         <div class="column">
             <div class="container">
-                <h1 class="title">BioTune</span></h1>
+                <h1 class="title">Biotune</h1>
                 <h2 class="subtitle">
-                    Course planning made easy.
+                    Using genetic algorithms to create music
                 </h2>
                 <div class="links">
-                    <a href="http://courseplanit.com/" target="_blank">
-                        <i class="fas fa-globe fa-md"></i>
-                        Website
-                    </a>
-                    |
-                    <a href="https://github.com/LampshadeSoftware/Planit" target="_blank">
+                    <a href="https://github.com/CowboyLynk/BioTune" target="_blank">
                         <i class="fab fa-github fa-md"></i>
                         Github
                     </a>
@@ -35,7 +28,7 @@
         <!-- Right side -->
         <div class="column">
             <figure class="image">
-            <img id="hero-image" src="images/planit/planit-cover.png">
+            <img id="hero-image" src="images/biotune/cover.png">
         </figure>
         </div>
         </nav>
@@ -45,27 +38,25 @@
     <div class="container">
         <h2 class="subtitle is-4">About</h2>
         <p>
-            You pick the courses you want to take without regard for logistics, and then Planit! figures out what
-            schedules you can take.
+            For my Introduction to Musical Composition class, I was tasked with creating a new musical notation system .
+            My notation system is designed to help humans and computers collaborate to create unique, but not completely random, music. It allows humans to define general constraints and then the computer fills in the missing details. This notation system is simplified, but could be further expanded to include more notes. The x-axis represents time and one quarter note fills up one grid cell. The y-axis (range of 21 half steps) is the note value. The lower the y-value the lower the note.
+        </p>
+        <figure class="image">
+            <img src="images/biotune/sample.png" style="width: 50%; margin: auto">
+        </figure>
+        <br>
+        <p>
+            The arrows (represented below by a slope and duration) indicates the general flow for how the human wants the computer to play the notes. The “x”s represents notes that the computer must play. And finally the black bar means to rest (i.e. the computer should not play any notes during this time). Visually, this notation looks like the image below. However the representation that the computer gets is described by the three lists below the image.
+        </p>
+        <p>
+            I forked <a href="https://github.com/DanielMcCrystal/TribeHacks" target="_blank">Daniel McCrystal's repo</a> and extended it to work for my use case.
         </p>
 
-        <h2 class="subtitle is-4">Screenshots</h2>
-        <div class="main-carousel" data-flickity='{ "fullscreen": true, "pageDots": false }'>
-            <div class="carousel-cell">
-                <figure class="image">
-                    <img src="images/planit/planit-screenshot-1.png">
-                </figure>
-            </div>
-            <div class="carousel-cell">
-                <figure class="image">
-                    <img src="images/planit/planit-screenshot-2.png">
-                </figure>
-            </div>
+        <h2 class="subtitle is-4">Video</h2>
+        <div class="videoWrapper">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/EDsoenmD-bU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
 </section>
-
-<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-<script src="https://unpkg.com/flickity-fullscreen@1/fullscreen.js"></script>
 </body>
 </html>

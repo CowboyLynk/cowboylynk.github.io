@@ -32,13 +32,13 @@ let projects = [
     {
         "name": "The Word Game",
         "pid": "thewordgame",
-        "tags": ["Swift"],
+        "tags": ["Swift", "Firebase"],
         "category": "coding"
     },
     {
         "name": "Pong Stat",
         "pid": "pongstat",
-        "tags": ["Swift"],
+        "tags": ["Swift", "Charts"],
         "category": "coding"
     },
     {
@@ -48,6 +48,8 @@ let projects = [
         "category": "coding"
     }
 ];
+
+let tags = ["python", "opencv"];
 
 function initProjects() {
     let tbody = document.querySelector('#project-grid');
@@ -131,15 +133,16 @@ function hideModalProject() {
     window.history.replaceState({}, null, location.pathname);
 }
 
+function filterFunc() {
+    let name = $(this).find('.name').text();
+    return name.match( /ium$/ );
+}
+
 $(function() {
     // Init projects
     initProjects();
     $('.filters-button-group').on( 'click', 'button', function() {
         let filterValue = $( this ).attr('data-filter');
-        let filterFunc = function() {
-            let name = $(this).find('.name').text();
-            return name.match( /ium$/ );
-        };
         $grid.isotope({ filter: filterFunc });
     });
 

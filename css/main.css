@@ -17,6 +17,14 @@ body {
   color: #4A4A4A;
 }
 
+.icon i {
+  color: #7A7A7A;
+}
+
+.icon i:hover {
+  color: #4A4A4A;
+}
+
 #project-grid {
   margin: 0 -6px 0 -6px;
 }
