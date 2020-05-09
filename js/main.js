@@ -48,8 +48,7 @@ let projects = [
         "category": "coding"
     }
 ];
-
-let tags = ["python", "opencv"];
+let activeTags = new Set();
 
 function initProjects() {
     let tbody = document.querySelector('#project-grid');
@@ -63,8 +62,8 @@ function initProjects() {
         let projectContainer = clone.querySelector(".element-item");
         projectContainer.setAttribute('data-category', project["category"]);
 
-        let projectCard = clone.querySelector("#project-card");
-        projectCard.id = pid;
+        let projectLink = clone.querySelector(".project-link");
+        projectLink.id = pid;
 
         let projectTitle = clone.querySelector("#project-title");
         projectTitle.textContent = name;
@@ -73,7 +72,7 @@ function initProjects() {
         let tags = project["tags"];
         for (let j = 0; j < tags.length; j++) {
             let tag = document.createElement("span");
-            tag.className = "tag";
+            tag.className = "tag display-tag";
             tag.textContent = tags[j];
             tagsContainer.appendChild(tag);
         }
@@ -88,7 +87,10 @@ function initProjects() {
 
 function addTagFilter(tagName) {
     let tagID = tagName.toLocaleLowerCase();
-    let tags = $("#tag-filters");
+    if (activeTags.has(tagName)) {
+        return;
+    }
+
     let addTagsButton = $("#add-tag-button");
     let tag = document.createElement("span");
     tag.classList.add("tag");
@@ -99,10 +101,14 @@ function addTagFilter(tagName) {
     button.className = "delete is-small";
     $(button).click(function() {
         $("#tag-" + tagID).remove();
+        activeTags.delete(tagID);
+        filterGrid();
     });
     tag.append(button);
     addTagsButton.before(tag);
-    // tags.insertBefore(tag, addTagsButton);
+
+    activeTags.add(tagID);
+    filterGrid();
 }
 
 function showModalProject(projectID) {
@@ -118,7 +124,6 @@ function showModalProject(projectID) {
     // Set the url
     let searchParams = new URLSearchParams(window.location.search);
     searchParams.set('pid', projectID);
-    console.log(location.pathname);
     window.history.replaceState({}, null, location.pathname + '?pid=' + projectID);
 }
 
@@ -133,18 +138,28 @@ function hideModalProject() {
     window.history.replaceState({}, null, location.pathname);
 }
 
-function filterFunc() {
-    let name = $(this).find('.name').text();
-    return name.match( /ium$/ );
+function filterGrid() {
+    let filterFunc = function() {
+        let tags = $(this).find(".tag").map(function() {
+            return this.textContent.toLowerCase();
+        }).get();
+
+        for (let i = 0; i < tags.length; i++) {
+            if (activeTags.has(tags[i])) {
+                return true;
+            }
+        }
+        return false;
+    };
+    if (activeTags.size === 0) {
+        filterFunc = "*"
+    }
+    $('.grid').isotope({filter: filterFunc});
 }
 
 $(function() {
     // Init projects
     initProjects();
-    $('.filters-button-group').on( 'click', 'button', function() {
-        let filterValue = $( this ).attr('data-filter');
-        $grid.isotope({ filter: filterFunc });
-    });
 
     // Set up the grid
     let $grid = $('.grid').isotope({
@@ -156,10 +171,10 @@ $(function() {
     });
 
     // Set up click events
-    $("div.card").on("click", function(e){
+    $("div.project-link").on("click", function(e){
         showModalProject(this.id);
 
-        e.preventDefault(); //to prevent any other unwanted behavior clicking the div might cause
+        e.preventDefault(); // to prevent any other unwanted behavior clicking the div might cause
     });
     $("#blur").on("click", function(e){
         if (e.target === this) {
@@ -167,6 +182,11 @@ $(function() {
             e.preventDefault(); //to prevent any other unwanted behavior clicking the div might cause
         }
     });
+    $(".display-tag").on("click", function(e) {
+        addTagFilter(this.textContent);
+        e.preventDefault();
+    });
+
 
     // Check id of page and load project if necessary
     let searchParams = new URLSearchParams(window.location.search);
@@ -174,7 +194,4 @@ $(function() {
         let pid = searchParams.get('pid');
         showModalProject(pid);
     }
-
-    addTagFilter("Python");
-    addTagFilter("OpenCV");
 });

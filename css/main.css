@@ -68,6 +68,10 @@ body {
     margin: 20px 5%;
   }
 }
+.card-image, .display-tag {
+  cursor: pointer;
+}
+
 #project_box.loading {
   -webkit-transform: translate(0, 100vh);
   transform: translate(0, 100vh);
