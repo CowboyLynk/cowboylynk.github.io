@@ -56,8 +56,12 @@
   }
 }
 
-.card-image, .display-tag {
+.project-link, .display-tag {
   cursor: pointer;
+}
+
+#project-title:hover {
+  color: $blue;
 }
 
 #project_box.loading {

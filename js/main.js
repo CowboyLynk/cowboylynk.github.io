@@ -48,6 +48,7 @@ let projects = [
         "category": "coding"
     }
 ];
+let allTags = new Set();
 let activeTags = new Set();
 
 function initProjects() {
@@ -62,8 +63,8 @@ function initProjects() {
         let projectContainer = clone.querySelector(".element-item");
         projectContainer.setAttribute('data-category', project["category"]);
 
-        let projectLink = clone.querySelector(".project-link");
-        projectLink.id = pid;
+        let projectLink = clone.querySelectorAll(".project-link");
+        $(projectLink).data("id", pid);
 
         let projectTitle = clone.querySelector("#project-title");
         projectTitle.textContent = name;
@@ -75,6 +76,7 @@ function initProjects() {
             tag.className = "tag display-tag";
             tag.textContent = tags[j];
             tagsContainer.appendChild(tag);
+            allTags.add(tags[j]);
         }
 
         let projectImage = clone.querySelector("#cover-image");
@@ -83,32 +85,6 @@ function initProjects() {
 
         tbody.appendChild(clone);
     }
-}
-
-function addTagFilter(tagName) {
-    let tagID = tagName.toLocaleLowerCase();
-    if (activeTags.has(tagName)) {
-        return;
-    }
-
-    let addTagsButton = $("#add-tag-button");
-    let tag = document.createElement("span");
-    tag.classList.add("tag");
-    tag.id = "tag-" + tagID;
-    tag.textContent = tagName;
-    tag.setAttribute("data-id", tagID);
-    let button = document.createElement("div");
-    button.className = "delete is-small";
-    $(button).click(function() {
-        $("#tag-" + tagID).remove();
-        activeTags.delete(tagID);
-        filterGrid();
-    });
-    tag.append(button);
-    addTagsButton.before(tag);
-
-    activeTags.add(tagID);
-    filterGrid();
 }
 
 function showModalProject(projectID) {
@@ -136,6 +112,32 @@ function hideModalProject() {
         $(blur).hide();
     });
     window.history.replaceState({}, null, location.pathname);
+}
+
+function addTagFilter(tagName) {
+    let tagID = tagName.toLocaleLowerCase();
+    if (activeTags.has(tagID)) {
+        return;
+    }
+
+    let tags = $("#tag-filters");
+    let tag = document.createElement("span");
+    tag.classList.add("tag");
+    tag.id = "tag-" + tagID;
+    tag.textContent = tagName;
+    tag.setAttribute("data-id", tagID);
+    let button = document.createElement("div");
+    button.className = "delete is-small";
+    $(button).click(function() {
+        $("#tag-" + $.escapeSelector(tagID)).remove();
+        activeTags.delete(tagID);
+        filterGrid();
+    });
+    tag.append(button);
+    tags.append(tag);
+
+    activeTags.add(tagID);
+    filterGrid();
 }
 
 function filterGrid() {
@@ -171,8 +173,8 @@ $(function() {
     });
 
     // Set up click events
-    $("div.project-link").on("click", function(e){
-        showModalProject(this.id);
+    $(".project-link").on("click", function(e){
+        showModalProject($(this).data("id"));
 
         e.preventDefault(); // to prevent any other unwanted behavior clicking the div might cause
     });
@@ -187,6 +189,8 @@ $(function() {
         e.preventDefault();
     });
 
+    // Set up autocomplete tags
+    // TODO: Figure out how to do this
 
     // Check id of page and load project if necessary
     let searchParams = new URLSearchParams(window.location.search);

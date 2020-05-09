@@ -68,8 +68,12 @@ body {
     margin: 20px 5%;
   }
 }
-.card-image, .display-tag {
+.project-link, .display-tag {
   cursor: pointer;
+}
+
+#project-title:hover {
+  color: #3273DC;
 }
 
 #project_box.loading {
