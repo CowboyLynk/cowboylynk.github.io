@@ -110,6 +110,74 @@ body {
   opacity: 0;
 }
 
+#tag-filters {
+  box-shadow: inset 0 0.0625em 0.125em rgba(10, 10, 10, 0.05);
+  max-width: 100%;
+  width: 100%;
+  background-color: white;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  padding-left: 0.5rem;
+}
+
+#tag-filters .tag {
+  margin: 0.5rem 0.5rem 0.5rem 0;
+}
+
+#tag-filters:hover {
+  border-color: #EDEDEDED;
+}
+
+#tagsInput {
+  height: 2.5rem;
+  border-width: 0;
+  box-shadow: none;
+  padding: 0;
+}
+
+#tagsInput:focus {
+  outline: 0;
+}
+
+.autocomplete {
+  /*the container must be positioned relative:*/
+  position: relative;
+  display: inline-block;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+}
+
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: #e9e9e9;
+}
+
+.autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: #3273DC !important;
+  color: #ffffff;
+}
+
+.autocomplete-active strong {
+  color: #ffffff;
+}
+
 /*! bulma.io v0.8.2 | MIT License | github.com/jgthms/bulma */
 @keyframes spinAround {
   from {

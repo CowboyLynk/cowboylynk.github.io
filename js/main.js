@@ -49,7 +49,7 @@ let projects = [
     }
 ];
 let allTags = new Set();
-let activeTags = new Set();
+let activeTags = [];
 
 function initProjects() {
     let tbody = document.querySelector('#project-grid');
@@ -114,13 +114,19 @@ function hideModalProject() {
     window.history.replaceState({}, null, location.pathname);
 }
 
+function removeTagFilter(tagID) {
+    $("#tag-" + $.escapeSelector(tagID)).remove();
+    activeTags = activeTags.filter(function(e) { return e !== tagID });
+    filterGrid();
+}
+
 function addTagFilter(tagName) {
     let tagID = tagName.toLocaleLowerCase();
-    if (activeTags.has(tagID)) {
+    if (activeTags.includes(tagID)) {
         return;
     }
 
-    let tags = $("#tag-filters");
+    // let tags = $("#tag-filters");
     let tag = document.createElement("span");
     tag.classList.add("tag");
     tag.id = "tag-" + tagID;
@@ -129,14 +135,13 @@ function addTagFilter(tagName) {
     let button = document.createElement("div");
     button.className = "delete is-small";
     $(button).click(function() {
-        $("#tag-" + $.escapeSelector(tagID)).remove();
-        activeTags.delete(tagID);
-        filterGrid();
+        removeTagFilter(tagID);
     });
     tag.append(button);
-    tags.append(tag);
+    let autocomplete = $(".autocomplete");
+    autocomplete.before(tag);
 
-    activeTags.add(tagID);
+    activeTags.push(tagID);
     filterGrid();
 }
 
@@ -147,13 +152,13 @@ function filterGrid() {
         }).get();
 
         for (let i = 0; i < tags.length; i++) {
-            if (activeTags.has(tags[i])) {
+            if (activeTags.includes(tags[i])) {
                 return true;
             }
         }
         return false;
     };
-    if (activeTags.size === 0) {
+    if (activeTags.length === 0) {
         filterFunc = "*"
     }
     $('.grid').isotope({filter: filterFunc});
@@ -190,6 +195,7 @@ $(function() {
     });
 
     // Set up autocomplete tags
+    autocomplete(document.getElementById("tagsInput"), [...allTags]);
     // TODO: Figure out how to do this
 
     // Check id of page and load project if necessary
