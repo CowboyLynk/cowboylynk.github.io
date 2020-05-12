@@ -17,6 +17,14 @@ body {
   color: #4A4A4A;
 }
 
+#menu-links a {
+  color: #7A7A7A;
+}
+
+#menu-links a:hover {
+  color: #4A4A4A;
+}
+
 .icon i {
   color: #7A7A7A;
 }
@@ -143,6 +151,7 @@ body {
   /*the container must be positioned relative:*/
   position: relative;
   display: inline-block;
+  flex-grow: 1;
 }
 
 .autocomplete-items {

@@ -8,6 +8,13 @@
   color: $grey-dark;
 }
 
+#menu-links a {
+  color: $grey;
+}
+#menu-links a:hover {
+  color: $grey-dark;
+}
+
 // Navigation stuff
 .icon i {
   color: $grey;
@@ -121,6 +128,7 @@
   /*the container must be positioned relative:*/
   position: relative;
   display: inline-block;
+  flex-grow: 1;
 }
 .autocomplete-items {
   position: absolute;
