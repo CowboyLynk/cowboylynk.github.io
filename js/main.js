@@ -99,7 +99,7 @@ function showModalProject(projectID) {
         $('.main-carousel').flickity({
             // options
             fullscreen: true,
-            pageDots: false,
+            pageDots: true,
         });
     });
     $("#project_box").toggleClass("loading", false);

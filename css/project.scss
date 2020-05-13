@@ -38,6 +38,15 @@
   display: flex;
   align-items: center;
 }
+.flickity-page-dots {
+  bottom: 0.5rem;
+}
+.main-carousel {
+  background-color: #f7f7f7;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  border-radius: 4px;
+}
 .carousel-cell {
   width: 80%;
   margin: 0 10%
