@@ -7,7 +7,9 @@
 .icon i:hover {
   color: $grey-dark;
 }
-
+#menu-links {
+  text-align: right;
+}
 #menu-links a {
   color: $grey;
 }
@@ -32,12 +34,6 @@
   padding: 0 6px 12px 6px;
   //padding: 12px;
 }
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  .element-item {
-    width: 100%;
-  }
-}
 .card {
   border: 0;
   -webkit-transition-duration: 0.4s; /* Safari */
@@ -55,12 +51,6 @@
   overflow: hidden;
   padding: 0;
   margin: 20px 20%;
-}
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  #project_box {
-    margin: 20px 5%;
-  }
 }
 
 .project-link, .display-tag {
@@ -102,8 +92,7 @@
 // AUTOCOMPLETE
 #tag-filters {
   box-shadow: inset 0 0.0625em 0.125em rgba(10, 10, 10, 0.05);
-  max-width: 100%;
-  width: 100%;
+  width: 50%;
   background-color: white;
   border: 1px solid #dbdbdb;
   border-radius: 4px;
@@ -157,6 +146,22 @@
 }
 .autocomplete-active strong {
   color: #ffffff;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .element-item {
+    width: 100%;
+  }
+  #project_box {
+    margin: 20px 5%;
+  }
+  #tag-filters {
+    width: 100%;
+  }
+  #menu-links {
+    text-align: left;
+  }
 }
 
 @import "../bulma/bulma.sass";
