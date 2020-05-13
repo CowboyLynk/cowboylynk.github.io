@@ -94,7 +94,14 @@ function showModalProject(projectID) {
     blur.toggleClass("loading", false);
 
     let project = $("#project");
-    project.load(projectID + ".html");
+    project.load(projectID + ".html", function() {
+        console.log("loaded " + projectID);
+        $('.main-carousel').flickity({
+            // options
+            fullscreen: true,
+            pageDots: false,
+        });
+    });
     $("#project_box").toggleClass("loading", false);
 
     // Set the url

@@ -148,10 +148,15 @@
   color: #ffffff;
 }
 
+@import "../bulma/bulma.sass";
+
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .element-item {
     width: 100%;
+  }
+  .media-content {
+    overflow-x: visible;
   }
   #project_box {
     margin: 20px 5%;
@@ -163,6 +168,4 @@
     text-align: left;
   }
 }
-
-@import "../bulma/bulma.sass";
 

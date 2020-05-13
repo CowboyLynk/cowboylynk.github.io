@@ -34,8 +34,12 @@
   border-radius: 10px;
 }
 
+.flickity-slider {
+  display: flex;
+  align-items: center;
+}
 .carousel-cell {
-  width: 100%;
+  width: 80%;
   margin: 0 10%
 }
 

@@ -178,24 +178,6 @@ body {
   color: #ffffff;
 }
 
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  .element-item {
-    width: 100%;
-  }
-
-  #project_box {
-    margin: 20px 5%;
-  }
-
-  #tag-filters {
-    width: 100%;
-  }
-
-  #menu-links {
-    text-align: left;
-  }
-}
 /*! bulma.io v0.8.2 | MIT License | github.com/jgthms/bulma */
 @keyframes spinAround {
   from {
@@ -9552,6 +9534,29 @@ label.panel-block:hover {
 .footer {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .element-item {
+    width: 100%;
+  }
+
+  .media-content {
+    overflow-x: visible;
+  }
+
+  #project_box {
+    margin: 20px 5%;
+  }
+
+  #tag-filters {
+    width: 100%;
+  }
+
+  #menu-links {
+    text-align: left;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
