@@ -204,8 +204,7 @@ $(function() {
     });
     $("#blur").on("click", function(e){
         if (e.target === this) {
-            hideModalProject();
-            window.history.pushState({}, null, location.pathname);
+            history.back();
             e.preventDefault(); //to prevent any other unwanted behavior clicking the div might cause
         }
     });
@@ -214,8 +213,7 @@ $(function() {
         e.preventDefault();
     });
     $("#close_project").on("click", function(e) {
-        hideModalProject();
-        window.history.pushState({}, null, location.pathname);
+        history.back();
     });
 
     // Set up autocomplete tags
