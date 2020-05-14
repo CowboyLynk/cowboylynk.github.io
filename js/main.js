@@ -96,10 +96,11 @@ function showModalProject(projectID) {
     let project = $("#project");
     project.load(projectID + ".html", function() {
         console.log("loaded " + projectID);
-        $('.main-carousel').flickity({
+        $('.carousel').flickity({
             // options
             fullscreen: true,
             pageDots: true,
+            lazyLoad: 1
         });
     });
     $("#project_box").toggleClass("loading", false);

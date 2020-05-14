@@ -1,3 +1,34 @@
+.hero.is-warning .links a {
+  color: rgba(0, 0, 0, 0.8);
+  opacity: 0.8;
+}
+
+.hero.is-warning .links a:hover {
+  opacity: 1;
+}
+
+.hero.is-light .links a {
+  color: rgba(0, 0, 0, 0.8);
+  opacity: 0.8;
+}
+
+.hero.is-light .links a:hover {
+  opacity: 1;
+}
+
+#hero-image {
+  border-radius: 10px;
+}
+
+.links a {
+  color: #fff;
+  opacity: 0.8;
+}
+
+.links a:hover {
+  opacity: 1;
+}
+
 #project_info {
   padding: 24px;
 }
@@ -10,47 +41,42 @@
   margin-bottom: 0.2em;
 }
 
-.links a {
-  color: #fff;
-  opacity: 0.8;
-}
-
-.links a:hover {
-  opacity: 1;
-}
-
-.hero.is-warning .links a {
-  color: rgba(0, 0, 0, 0.8);
-  opacity: 0.8;
-}
-
-.hero.is-warning .links a:hover {
-  opacity: 1;
-}
-
-#hero-image {
-  border-radius: 10px;
-}
-
 .flickity-slider {
   display: flex;
-  align-items: center;
 }
 
 .flickity-page-dots {
   bottom: 0.5rem;
 }
 
-.main-carousel {
-  background-color: #f7f7f7;
+.carousel {
+  background: #f7f7f7;
   padding-top: 1rem;
   padding-bottom: 2rem;
   border-radius: 4px;
 }
 
 .carousel-cell {
-  width: 80%;
-  margin: 0 10%;
+  width: 100%;
+  height: 350px;
+  margin-right: 10px;
+  /* center images in cells with flexbox */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-cell-image {
+  display: block;
+  max-height: 100%;
+}
+
+.carousel.is-fullscreen .carousel-cell {
+  height: 100%;
+}
+
+.carousel.is-fullscreen .carousel-cell-image {
+  max-width: 100%;
 }
 
 .flickity-button {
@@ -59,6 +85,14 @@
 
 .flickity-button:hover {
   background: rgba(102, 102, 102, 0.6);
+}
+
+.is-fullscreen .flickity-button {
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.is-fullscreen .flickity-button:hover {
+  background: #fff;
 }
 
 .videoWrapper {
