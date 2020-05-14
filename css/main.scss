@@ -1,6 +1,7 @@
 @charset "utf-8";
 @import "siteWide";
 
+// NAVIGATION LINKS
 .icon i {
   color: $grey;
 }
@@ -17,22 +18,13 @@
   color: $grey-dark;
 }
 
-// Navigation stuff
-.icon i {
-  color: $grey;
-}
-.icon i:hover {
-  color: $grey-dark;
-}
-
-// Grid
+// GRID
 #project-grid {
   margin: 0 -6px 0 -6px;
 }
 .element-item {
   width: 25%;
   padding: 0 6px 12px 6px;
-  //padding: 12px;
 }
 .card {
   border: 0;
@@ -44,6 +36,17 @@
   box-shadow: 0 5px 50px 0 rgba(0,0,0,0.2);
   transform: scale(1.01);
 }
+.project-link, .display-tag {
+  cursor: pointer;
+}
+#project-title:hover {
+  color: $blue;
+}
+
+// PROJECT POPUP
+body.modal-open,html.modal-open {
+    overflow: hidden;
+}
 #project_box {
   -webkit-transition-duration: 1s;
   transition-duration: 1s;
@@ -52,15 +55,6 @@
   padding: 0;
   margin: 20px 20%;
 }
-
-.project-link, .display-tag {
-  cursor: pointer;
-}
-
-#project-title:hover {
-  color: $blue;
-}
-
 #project_box.loading {
   -webkit-transform: translate(0,100vh);
   transform: translate(0, 100vh);
@@ -72,7 +66,6 @@
   position: absolute;
   margin: 10px;
 }
-
 #blur {
   padding: 0;
   position: fixed;
@@ -150,6 +143,7 @@
 
 @import "../bulma/bulma.sass";
 
+// MOBILE STUFF
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .element-item {

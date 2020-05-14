@@ -92,10 +92,10 @@ function showModalProject(projectID) {
     blur.show();
     blur.scrollTop(0);
     blur.toggleClass("loading", false);
+    $('body,html').toggleClass("modal-open", true);
 
     let project = $("#project");
     project.load(projectID + ".html", function() {
-        console.log("loaded " + projectID);
         $('.carousel').flickity({
             // options
             fullscreen: true,
@@ -119,6 +119,7 @@ function hideModalProject() {
     projectBox.one('transitionend', function(e) {
         $(blur).hide();
     });
+    $('body,html').toggleClass("modal-open", false);
     window.history.replaceState({}, null, location.pathname);
 }
 
