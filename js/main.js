@@ -51,6 +51,21 @@ let projects = [
 let allTags = new Set();
 let activeTags = [];
 
+window.onpopstate = checkState;
+
+function checkState(e) {
+    // page reload
+    if(e.state) {
+        if (e.state.pid) {
+            showModalProject(e.state.pid);
+        } else {
+            hideModalProject();
+        }
+    } else {
+        hideModalProject();
+    }
+}
+
 function initProjects() {
     let tbody = document.querySelector('#project-grid');
     let template = document.querySelector('#project-item-template');
@@ -104,11 +119,6 @@ function showModalProject(projectID) {
         });
     });
     $("#project_box").toggleClass("loading", false);
-
-    // Set the url
-    let searchParams = new URLSearchParams(window.location.search);
-    searchParams.set('pid', projectID);
-    window.history.replaceState({}, null, location.pathname + '?pid=' + projectID);
 }
 
 function hideModalProject() {
@@ -120,7 +130,6 @@ function hideModalProject() {
         $(blur).hide();
     });
     $('body,html').toggleClass("modal-open", false);
-    window.history.replaceState({}, null, location.pathname);
 }
 
 function removeTagFilter(tagID) {
@@ -188,19 +197,25 @@ $(function() {
 
     // Set up click events
     $(".project-link").on("click", function(e){
-        showModalProject($(this).data("id"));
-
+        let projectID = $(this).data("id");
+        showModalProject(projectID);
+        window.history.pushState({pid: projectID}, null, '?pid=' + projectID);
         e.preventDefault(); // to prevent any other unwanted behavior clicking the div might cause
     });
     $("#blur").on("click", function(e){
         if (e.target === this) {
             hideModalProject();
+            window.history.pushState({}, null, location.pathname);
             e.preventDefault(); //to prevent any other unwanted behavior clicking the div might cause
         }
     });
     $(".display-tag").on("click", function(e) {
         addTagFilter(this.textContent);
         e.preventDefault();
+    });
+    $("#close_project").on("click", function(e) {
+        hideModalProject();
+        window.history.pushState({}, null, location.pathname);
     });
 
     // Set up autocomplete tags
