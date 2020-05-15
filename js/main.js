@@ -54,12 +54,13 @@ let activeTags = [];
 window.onpopstate = checkState;
 
 function checkState(e) {
-    // page reload
-    if(e.state) {
-        if (e.state.pid) {
-            showModalProject(e.state.pid);
-        } else {
+    console.log(e);
+    if(e.state && e.state.pid) {
+        let pid = e.state.pid;
+        if (pid === "index") {
             hideModalProject();
+        } else {
+            showModalProject(pid);
         }
     } else {
         hideModalProject();
@@ -103,6 +104,7 @@ function initProjects() {
 }
 
 function showModalProject(projectID) {
+    console.log("showing project: " + projectID);
     let blur =  $("#blur");
     blur.show();
     blur.scrollTop(0);
@@ -127,10 +129,19 @@ function hideModalProject() {
     let projectBox = $("#project_box");
     projectBox.toggleClass("loading", true);
     projectBox.one('transitionend', function(e) {
-        $(blur).hide();
+        if (getPidFromURL() === "index") {
+            console.log("transitioned");
+            $(blur).hide();
+        }
     });
     $('body,html').toggleClass("modal-open", false);
 }
+
+function closeModalProject() {
+    hideModalProject();
+    window.history.pushState({pid: "index"}, null, location.pathname);
+}
+
 
 function removeTagFilter(tagID) {
     $("#tag-" + $.escapeSelector(tagID)).remove();
@@ -182,6 +193,15 @@ function filterGrid() {
     $('.grid').isotope({filter: filterFunc});
 }
 
+function getPidFromURL() {
+    let currentPid = "index";
+    let searchParams = new URLSearchParams(window.location.search);
+    if (searchParams.has('pid')) {
+        currentPid = searchParams.get('pid');
+    }
+    return currentPid;
+}
+
 $(function() {
     // Init projects
     initProjects();
@@ -203,8 +223,8 @@ $(function() {
         e.preventDefault(); // to prevent any other unwanted behavior clicking the div might cause
     });
     $("#blur").on("click", function(e){
-        if (e.target === this) {
-            history.back();
+        if (e.target === this && !this.classList.contains("loading")) {
+            closeModalProject();
             e.preventDefault(); //to prevent any other unwanted behavior clicking the div might cause
         }
     });
@@ -213,7 +233,7 @@ $(function() {
         e.preventDefault();
     });
     $("#close_project").on("click", function(e) {
-        history.back();
+        closeModalProject();
     });
 
     // Set up autocomplete tags
@@ -221,9 +241,10 @@ $(function() {
     // TODO: Figure out how to do this
 
     // Check id of page and load project if necessary
-    let searchParams = new URLSearchParams(window.location.search);
-    if (searchParams.has('pid')) {
-        let pid = searchParams.get('pid');
-        showModalProject(pid);
+    let startPid = getPidFromURL();
+    if (startPid !== "index") {
+        showModalProject(startPid);
     }
+    // Set initial state of the website
+    history.replaceState({pid: startPid}, null, null);
 });
