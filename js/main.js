@@ -134,7 +134,12 @@ function hideModalProject() {
     $('body,html').toggleClass("modal-open", false);
 }
 
-function closeModalProject() {
+function navigateToProject(projectID) {
+    showModalProject(projectID);
+    window.history.pushState({pid: projectID}, null, '?pid=' + projectID);
+}
+
+function navigateAwayFromProject() {
     hideModalProject();
     window.history.pushState({pid: "index"}, null, location.pathname);
 }
@@ -214,14 +219,12 @@ $(function() {
 
     // Set up click events
     $(".project-link").on("click", function(e){
-        let projectID = $(this).data("id");
-        showModalProject(projectID);
-        window.history.pushState({pid: projectID}, null, '?pid=' + projectID);
+        navigateToProject($(this).data("id"));
         e.preventDefault(); // to prevent any other unwanted behavior clicking the div might cause
     });
     $("#blur").on("click", function(e){
         if (e.target === this && !this.classList.contains("loading")) {
-            closeModalProject();
+            navigateAwayFromProject();
             e.preventDefault(); //to prevent any other unwanted behavior clicking the div might cause
         }
     });
@@ -230,7 +233,7 @@ $(function() {
         e.preventDefault();
     });
     $("#close_project").on("click", function(e) {
-        closeModalProject();
+        navigateAwayFromProject();
     });
 
     // Set up autocomplete tags
