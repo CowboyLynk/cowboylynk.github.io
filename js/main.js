@@ -54,7 +54,6 @@ let activeTags = [];
 window.onpopstate = checkState;
 
 function checkState(e) {
-    console.log(e);
     if(e.state && e.state.pid) {
         let pid = e.state.pid;
         if (pid === "index") {
@@ -104,7 +103,6 @@ function initProjects() {
 }
 
 function showModalProject(projectID) {
-    console.log("showing project: " + projectID);
     let blur =  $("#blur");
     blur.show();
     blur.scrollTop(0);
@@ -130,7 +128,6 @@ function hideModalProject() {
     projectBox.toggleClass("loading", true);
     projectBox.one('transitionend', function(e) {
         if (getPidFromURL() === "index") {
-            console.log("transitioned");
             $(blur).hide();
         }
     });

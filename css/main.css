@@ -90,6 +90,7 @@ body.modal-open, html.modal-open {
   padding: 0;
   position: fixed;
   overflow-y: scroll;
+  will-change: scroll-position;
   top: 0;
   right: 0;
   bottom: 0;
