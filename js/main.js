@@ -50,6 +50,8 @@ let projects = [
 ];
 let allTags = new Set();
 let activeTags = [];
+let modalProject = $('.modal-project');
+let modelProjectContent = $(".modal-project-content");
 
 window.onpopstate = checkState;
 
@@ -103,11 +105,10 @@ function initProjects() {
 }
 
 function showModalProject(projectID) {
-    let blur =  $("#blur");
-    blur.show();
-    blur.scrollTop(0);
-    blur.toggleClass("loading", false);
-    $('body,html').toggleClass("modal-open", true);
+    modalProject.show();
+    modalProject.scrollTop(0);
+    modalProject.toggleClass("loading", false);
+    $('body,html').toggleClass("is-clipped", true);
 
     let project = $("#project");
     project.load(projectID + ".html", function() {
@@ -118,20 +119,16 @@ function showModalProject(projectID) {
             lazyLoad: 1
         });
     });
-    $("#project_box").toggleClass("loading", false);
 }
 
 function hideModalProject() {
-    let blur = $("#blur");
-    $(blur).toggleClass("loading", true);
-    let projectBox = $("#project_box");
-    projectBox.toggleClass("loading", true);
-    projectBox.one('transitionend', function(e) {
+    modalProject.toggleClass("loading", true);
+    modelProjectContent.one('transitionend', function(e) {
         if (getPidFromURL() === "index") {
-            $(blur).hide();
+            modalProject.hide();
         }
     });
-    $('body,html').toggleClass("modal-open", false);
+    $('body,html').toggleClass("is-clipped", false);
 }
 
 function navigateToProject(projectID) {
@@ -222,7 +219,7 @@ $(function() {
         navigateToProject($(this).data("id"));
         e.preventDefault(); // to prevent any other unwanted behavior clicking the div might cause
     });
-    $("#blur").on("click", function(e){
+    $(".modal-project-background").on("click", function(e){
         if (e.target === this && !this.classList.contains("loading")) {
             navigateAwayFromProject();
             e.preventDefault(); //to prevent any other unwanted behavior clicking the div might cause

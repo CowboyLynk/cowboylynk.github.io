@@ -1,19 +1,24 @@
 @charset "utf-8";
 @import "siteWide";
+@import "../bulma/bulma.sass";
 
 // NAVIGATION LINKS
 .icon i {
   color: $grey;
 }
+
 .icon i:hover {
   color: $grey-dark;
 }
+
 #menu-links {
   text-align: right;
 }
+
 #menu-links a {
   color: $grey;
 }
+
 #menu-links a:hover {
   color: $grey-dark;
 }
@@ -22,65 +27,83 @@
 #project-grid {
   margin: 0 -6px 0 -6px;
 }
+
 .element-item {
   width: 25%;
   padding: 0 6px 12px 6px;
 }
+
 .card {
   border: 0;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
   margin: 1px;
 }
+
 .card:hover {
-  box-shadow: 0 5px 50px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 5px 50px 0 rgba(0, 0, 0, 0.2);
   transform: scale(1.01);
 }
+
 .project-link, .display-tag {
   cursor: pointer;
 }
+
 #project-title:hover {
   color: $blue;
 }
 
 // PROJECT POPUP
-body.modal-open,html.modal-open {
-    overflow: hidden;
+.modal-project {
+  padding: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  overflow-y: scroll;
+  will-change: scroll-position;
 }
-#project_box {
+
+.modal-project-background {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   -webkit-transition-duration: 1s;
   transition-duration: 1s;
-  border-radius: 25px;
-  overflow: hidden;
-  padding: 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.modal-project-content {
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
   margin: 20px 20%;
+  position: relative;
 }
-#project_box.loading {
-  -webkit-transform: translate(0,100vh);
+
+.modal-project.loading .modal-project-background {
+  opacity: 0;
+}
+
+.modal-project.loading .modal-project-content {
+  -webkit-transform: translate(0, 100vh);
   transform: translate(0, 100vh);
+  opacity: 0;
 }
+
 #project {
   background-color: white;
+  border-radius: 25px;
+  overflow: hidden;
 }
+
 #close_project {
   position: absolute;
   margin: 10px;
-}
-#blur {
-  padding: 0;
-  position: fixed;
-  overflow-y: scroll;
-  will-change: scroll-position;
-  top: 0; right: 0; bottom: 0; left: 0;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  display: none;
-  -webkit-transition-duration: 1s;
-  transition-duration: 1s;
-  opacity: 1;
-}
-#blur.loading {
-  opacity: 0;
 }
 
 // AUTOCOMPLETE
@@ -92,27 +115,33 @@ body.modal-open,html.modal-open {
   border-radius: 4px;
   padding-left: 0.5rem;
 }
+
 #tag-filters .tag {
   margin: 0.5rem 0.5rem 0.5rem 0;
 }
+
 #tag-filters:hover {
   border-color: #EDEDEDED;
 }
+
 #tagsInput {
   height: 2.5rem;
   border-width: 0;
   box-shadow: none;
   padding: 0;
 }
+
 #tagsInput:focus {
   outline: 0;
 }
+
 .autocomplete {
   /*the container must be positioned relative:*/
   position: relative;
   display: inline-block;
   flex-grow: 1;
 }
+
 .autocomplete-items {
   position: absolute;
   border: 1px solid #d4d4d4;
@@ -123,26 +152,28 @@ body.modal-open,html.modal-open {
   left: 0;
   right: 0;
 }
+
 .autocomplete-items div {
   padding: 10px;
   cursor: pointer;
   background-color: #fff;
   border-bottom: 1px solid #d4d4d4;
 }
+
 .autocomplete-items div:hover {
   /*when hovering an item:*/
   background-color: #e9e9e9;
 }
+
 .autocomplete-active {
   /*when navigating through the items using the arrow keys:*/
   background-color: $blue !important;
   color: #ffffff;
 }
+
 .autocomplete-active strong {
   color: #ffffff;
 }
-
-@import "../bulma/bulma.sass";
 
 // MOBILE STUFF
 @media only screen and (max-width: 768px) {
@@ -153,7 +184,7 @@ body.modal-open,html.modal-open {
   .media-content {
     overflow-x: visible;
   }
-  #project_box {
+  .modal-project-content {
     margin: 20px 5%;
   }
   #tag-filters {
