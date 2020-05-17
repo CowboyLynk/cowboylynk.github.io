@@ -46,6 +46,12 @@ let projects = [
         "pid": "mitadmissions",
         "tags": ["After Effects", "Blender", "C4D"],
         "category": "coding"
+    },
+    {
+        "name": "Sisyphus Table",
+        "pid": "sisyphus",
+        "tags": ["Fusion 360", "C++"],
+        "category": "coding"
     }
 ];
 let allTags = new Set();
