@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f1375ea5-f37e-4f66-8b5b-52b7f79c7043" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grid Photos.psd" beforeDir="false" afterPath="$PROJECT_DIR$/Grid Photos.psd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,7 +32,7 @@
     <property name="NewWatcherDialog.advanced.open" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../drawdibles" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -85,7 +86,9 @@
       <workItem from="1589131955953" duration="7000" />
       <workItem from="1589291185564" duration="28536000" />
       <workItem from="1589637722558" duration="96000" />
-      <workItem from="1589734627271" duration="3125000" />
+      <workItem from="1589734627271" duration="3214000" />
+      <workItem from="1589757178508" duration="315000" />
+      <workItem from="1589828688184" duration="157000" />
     </task>
     <servers />
   </component>
