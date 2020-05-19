@@ -58,6 +58,7 @@ let allTags = new Set();
 let activeTags = [];
 let modalProject = $('.modal-project');
 let modelProjectContent = $(".modal-project-content");
+let project = $("#project");
 
 window.onpopstate = checkState;
 
@@ -116,7 +117,6 @@ function showModalProject(projectID) {
     modalProject.toggleClass("loading", false);
     $('body,html').toggleClass("is-clipped", true);
 
-    let project = $("#project");
     project.load(projectID + ".html", function() {
         $('.carousel').flickity({
             // options
@@ -132,6 +132,7 @@ function hideModalProject() {
     modelProjectContent.one('transitionend', function(e) {
         if (getPidFromURL() === "index") {
             modalProject.hide();
+            project.empty();
         }
     });
     $('body,html').toggleClass("is-clipped", false);
