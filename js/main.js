@@ -36,12 +36,6 @@ let projects = [
         "category": "coding"
     },
     {
-        "name": "Pong Stat",
-        "pid": "pongstat",
-        "tags": ["Swift", "Charts"],
-        "category": "coding"
-    },
-    {
         "name": "MIT Admissions",
         "pid": "mitadmissions",
         "tags": ["After Effects", "Blender", "C4D"],
