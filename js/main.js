@@ -36,15 +36,15 @@ let projects = [
         "category": "coding"
     },
     {
-        "name": "MIT Admissions",
-        "pid": "mitadmissions",
-        "tags": ["After Effects", "Blender", "C4D"],
-        "category": "coding"
-    },
-    {
         "name": "Sisyphus Table",
         "pid": "sisyphus",
         "tags": ["Fusion 360", "C++"],
+        "category": "coding"
+    },
+    {
+        "name": "MIT Admissions",
+        "pid": "mitadmissions",
+        "tags": ["After Effects", "Blender", "C4D"],
         "category": "coding"
     }
 ];
