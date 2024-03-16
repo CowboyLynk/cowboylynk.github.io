@@ -1,6 +1,7 @@
 @charset "utf-8";
 @import "siteWide";
-@import "../bulma/bulma.sass";
+@import "project";
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
 
 // NAVIGATION LINKS
 .icon i {
@@ -54,6 +55,8 @@
 }
 
 // PROJECT POPUP
+$animation_duration: 0.5s;
+
 .modal-project {
   padding: 0;
   position: fixed;
@@ -69,8 +72,8 @@
 .modal-project-background {
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-  -webkit-transition-duration: 1s;
-  transition-duration: 1s;
+  -webkit-transition-duration: $animation_duration;
+  transition-duration: $animation_duration;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -79,8 +82,8 @@
 }
 
 .modal-project-content {
-  -webkit-transition-duration: 1s;
-  transition-duration: 1s;
+  -webkit-transition-duration: $animation_duration;
+  transition-duration: $animation_duration;
   margin: 20px 20%;
   position: relative;
 }

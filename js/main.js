@@ -57,7 +57,7 @@ let project = $("#project");
 window.onpopstate = checkState;
 
 function checkState(e) {
-    if(e.state && e.state.pid) {
+    if (e.state && e.state.pid) {
         let pid = e.state.pid;
         if (pid === "index") {
             hideModalProject();
@@ -111,7 +111,7 @@ function showModalProject(projectID) {
     modalProject.toggleClass("loading", false);
     $('body,html').toggleClass("is-clipped", true);
 
-    project.load(projectID + ".html", function() {
+    project.load("project_pages/" + projectID + ".html", function () {
         $('.carousel').flickity({
             // options
             fullscreen: true,
@@ -123,7 +123,7 @@ function showModalProject(projectID) {
 
 function hideModalProject() {
     modalProject.toggleClass("loading", true);
-    modelProjectContent.one('transitionend', function(e) {
+    modelProjectContent.one('transitionend', function (e) {
         if (getPidFromURL() === "index") {
             modalProject.hide();
             project.empty();
@@ -134,18 +134,18 @@ function hideModalProject() {
 
 function navigateToProject(projectID) {
     showModalProject(projectID);
-    window.history.pushState({pid: projectID}, null, '?pid=' + projectID);
+    window.history.pushState({ pid: projectID }, null, '?pid=' + projectID);
 }
 
 function navigateAwayFromProject() {
     hideModalProject();
-    window.history.pushState({pid: "index"}, null, location.pathname);
+    window.history.pushState({ pid: "index" }, null, location.pathname);
 }
 
 
 function removeTagFilter(tagID) {
     $("#tag-" + $.escapeSelector(tagID)).remove();
-    activeTags = activeTags.filter(function(e) { return e !== tagID });
+    activeTags = activeTags.filter(function (e) { return e !== tagID });
     filterGrid();
 }
 
@@ -163,7 +163,7 @@ function addTagFilter(tagName) {
     tag.setAttribute("data-id", tagID);
     let button = document.createElement("div");
     button.className = "delete is-small";
-    $(button).click(function() {
+    $(button).click(function () {
         removeTagFilter(tagID);
     });
     tag.append(button);
@@ -175,8 +175,8 @@ function addTagFilter(tagName) {
 }
 
 function filterGrid() {
-    let filterFunc = function() {
-        let tags = $(this).find(".tag").map(function() {
+    let filterFunc = function () {
+        let tags = $(this).find(".tag").map(function () {
             return this.textContent.toLowerCase();
         }).get();
 
@@ -190,7 +190,7 @@ function filterGrid() {
     if (activeTags.length === 0) {
         filterFunc = "*"
     }
-    $('.grid').isotope({filter: filterFunc});
+    $('.grid').isotope({ filter: filterFunc });
 }
 
 function getPidFromURL() {
@@ -202,7 +202,7 @@ function getPidFromURL() {
     return currentPid;
 }
 
-$(function() {
+$(function () {
     // Init projects
     initProjects();
 
@@ -216,21 +216,21 @@ $(function() {
     });
 
     // Set up click events
-    $(".project-link").on("click", function(e){
+    $(".project-link").on("click", function (e) {
         navigateToProject($(this).data("id"));
         e.preventDefault(); // to prevent any other unwanted behavior clicking the div might cause
     });
-    $(".modal-project-background").on("click", function(e){
+    $(".modal-project-background").on("click", function (e) {
         if (e.target === this && !this.classList.contains("loading")) {
             navigateAwayFromProject();
             e.preventDefault(); //to prevent any other unwanted behavior clicking the div might cause
         }
     });
-    $(".display-tag").on("click", function(e) {
+    $(".display-tag").on("click", function (e) {
         addTagFilter(this.textContent);
         e.preventDefault();
     });
-    $("#close_project").on("click", function(e) {
+    $("#close_project").on("click", function (e) {
         navigateAwayFromProject();
     });
 
@@ -244,5 +244,5 @@ $(function() {
         showModalProject(startPid);
     }
     // Set initial state of the website
-    history.replaceState({pid: startPid}, null, null);
+    history.replaceState({ pid: startPid }, null, null);
 });
