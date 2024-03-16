@@ -194,15 +194,15 @@ body {
   top: 0;
 }
 
+.modal-project.loading .modal-project-background {
+  opacity: 0;
+}
+
 .modal-project-content {
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
-  margin: 20px 20%;
+  margin: 20px 15%;
   position: relative;
-}
-
-.modal-project.loading .modal-project-background {
-  opacity: 0;
 }
 
 .modal-project.loading .modal-project-content {
@@ -220,7 +220,7 @@ body {
 
 #close_project {
   position: absolute;
-  margin: 10px;
+  margin: 25px;
 }
 
 #tag-filters {
@@ -300,7 +300,12 @@ body {
     overflow-x: visible;
   }
   .modal-project-content {
+    display: flex;
+    flex-direction: row-reverse;
     margin: 20px 5%;
+  }
+  #close_project {
+    margin-right: 25px;
   }
   #tag-filters {
     width: 100%;

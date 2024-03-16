@@ -55,8 +55,6 @@
 }
 
 // PROJECT POPUP
-$animation_duration: 0.5s;
-
 .modal-project {
   padding: 0;
   position: fixed;
@@ -69,6 +67,7 @@ $animation_duration: 0.5s;
   will-change: scroll-position;
 }
 
+$animation_duration: 0.5s;
 .modal-project-background {
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
@@ -81,15 +80,15 @@ $animation_duration: 0.5s;
   top: 0;
 }
 
+.modal-project.loading .modal-project-background {
+  opacity: 0;
+}
+
 .modal-project-content {
   -webkit-transition-duration: $animation_duration;
   transition-duration: $animation_duration;
-  margin: 20px 20%;
+  margin: 20px 15%;
   position: relative;
-}
-
-.modal-project.loading .modal-project-background {
-  opacity: 0;
 }
 
 .modal-project.loading .modal-project-content {
@@ -107,7 +106,7 @@ $animation_duration: 0.5s;
 
 #close_project {
   position: absolute;
-  margin: 10px;
+  margin: 25px;
 }
 
 // AUTOCOMPLETE
@@ -189,7 +188,12 @@ $animation_duration: 0.5s;
     overflow-x: visible;
   }
   .modal-project-content {
+    display: flex;
+    flex-direction: row-reverse;
     margin: 20px 5%;
+  }
+  #close_project {
+    margin-right: 25px;
   }
   #tag-filters {
     width: 100%;
