@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta name="Description" content="Hi, I'm Cowboy. I work as a software engineer at Google Geo in Seattle, WA. I am deeply interested in engineering but I also have a passion for the arts.">
     <title>Cowboy Lynk</title>
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/flickity-fullscreen@1/fullscreen.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/project.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Kanit">
     <script src="https://kit.fontawesome.com/f55cf00dfe.js" crossorigin="anonymous"></script>
+    <style>
+        html {
+            background-color: black;
+        }
+    </style>
 
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
@@ -19,88 +21,51 @@
 </head>
 <body>
 
-<!-- Title -->
-<section class="section" style="padding-bottom: 2rem">
-    <div class="container">
-        <div class="columns is-vcentered">
-            <div class="column">
-                <h1 class="title">
-                    COWBOY LYNK
-                </h1>
-                <h2 class="subtitle">
-                    <a class="icon is-large" href="https://github.com/CowboyLynk" target="_blank">
-                        <i class="fab fa-github fa-lg"></i>
-                    </a>
-                    |
-                    <a class="icon is-large" href="https://www.linkedin.com/in/cowboylynk/" target="_blank">
-                        <i class="fab fa-linkedin fa-lg"></i>
-                    </a>
-                    |
-                    <a class="icon is-large" href="https://www.youtube.com/user/LynkFilms" target="_blank">
-                        <i class="fab fa-youtube fa-lg"></i>
-                    </a>
-                </h2>
-            </div>
-            <div class="column" id="menu-links">
-                <a onclick="navigateToProject('about')">+ ABOUT</a>
-            </div>
-        </div>
+<section id="hero" class="hero home is-fullheight">
+    <div class="hero-body">
     </div>
-</section>
-
-<!-- Cards -->
-<section class="section" style="padding-top: 0">
-    <div class="container">
-        <div class="tags is-vcentered" id="tag-filters">
-            <div class="autocomplete">
-                <input class="input" id="tagsInput" type="text" name="activeTags"
-                       placeholder="Enter tags (e.g. &quot;python&quot;)">
-            </div>
-        </div>
-        <div class="grid" id="project-grid"></div>
-    </div>
-</section>
-
-<!-- Card Template -->
-<template id="project-item-template">
-    <div class="element-item">
-        <div class="card">
-            <div class="card-image project-link">
-                <figure class="image is-4by3">
-                    <img id="cover-image" src="images/headshot.png"
-                         alt="Cowboy Lynk">
-                </figure>
-            </div>
-            <div class="card-content">
-                <div class="media">
-                    <div class="media-content">
-                        <p class="title is-4 project-link" id="project-title"></p>
-                        <div class="tags subtitle" id="tags">
+    <div class="hero-foot">
+        <div class="container has-text-centered" style="padding-bottom: 2em;">
+            <div class="level">
+                <div class="level-left">
+                    <h1 class="title home-text">COWBOY LYNK</h1>
+                </div>
+                <div class="level-right">
+                    <div class="columns">
+                        <div class="column">
+                            <a href="photography.html" class="button is-outlined is-sedona">Photography</a>
+                        </div>
+                        <div class="column">
+                            <a href="computer_projects.html" class="button is-outlined is-sedona">Computer projects</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</template>
+</section>
 
-<!-- Modal Popup -->
-<div class="modal-project loading">
-    <div class="modal-project-background"></div>
-    <div class="modal-project-content loading">
-        <a class="delete" id="close_project"></a>
-        <div id="project"></div>
-    </div>
-    </div>
-</div>
-
-<!-- load scripts -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-<script src="https://unpkg.com/flickity-fullscreen@1/fullscreen.js"></script>
-<script src="js/autocomplete.js" charset="UTF-8"></script>
-<script src="js/main.js" charset="UTF-8"></script>
-<!-- end load scripts -->
+<script>
+    const images = [
+      "url('photography/DSC00306.jpg')",  // HI, cliff
+      "url('photography/DSC00577.jpg')",  // HI, sunset
+      "url('photography/DSC00957.jpg')",  // Snow Lake, Salome and Rio
+      "url('photography/DSC01022.jpg')",  // Tenzen, sunset
+      "url('photography/DSC01036.jpg')",  // Tenzen, Salome
+      "url('photography/DSC01079.jpg')",  // Tenzen, stars
+      "url('photography/DSC01171.jpg')",  // Sedona, sunset
+      "url('photography/DSC01234.jpg')",  // Sedona, Daniel cave
+      "url('photography/DSC01336-Pano-2.jpg')",  // Sedona stars
+      "url('photography/IMG_1737.jpg')",  // Packwood, Daniel
+      "url('photography/DSC01228.jpg')",  // Sedona, Daniel cave CU
+    ];
+  
+    function randomBackground() {
+        const randomIndex = Math.floor(Math.random() * images.length);
+        document.getElementById("hero").style.backgroundImage = images[randomIndex];
+    }
+  
+    randomBackground()
+  </script>
 </body>
 </html>

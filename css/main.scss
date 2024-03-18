@@ -1,6 +1,7 @@
 @charset "utf-8";
 @import "siteWide";
-@import "../bulma/bulma.sass";
+@import "project";
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
 
 // NAVIGATION LINKS
 .icon i {
@@ -21,6 +22,46 @@
 
 #menu-links a:hover {
   color: $grey-dark;
+}
+
+// HOME PAGE
+$sedona-orange: #ffd9a3;
+$sunset-pink: #fea283;
+$primary-home: $sunset-pink;
+.home {
+  background-image: url("../photography/DSC01336-Pano.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+
+  -webkit-animation: fadein 2s ; /* Chrome, Safari, Opera */
+  animation: fadein 2s ;
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes fadein {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+/* Standard syntax */
+@keyframes fadein {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.home-text {
+  color: $sedona-orange;
+}
+
+.button.is-sedona {
+  border-color: $sedona-orange;
+  background-color: rgba(0, 0, 0, 0);
+  color: $sedona-orange
+}
+.button.is-sedona:hover {
+  border-color: $sedona-orange;
+  background-color: $sedona-orange;
+  color: rgba(0, 0, 0, 0.7)
+  
 }
 
 // GRID
@@ -66,11 +107,12 @@
   will-change: scroll-position;
 }
 
+$animation_duration: 0.5s;
 .modal-project-background {
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-  -webkit-transition-duration: 1s;
-  transition-duration: 1s;
+  -webkit-transition-duration: $animation_duration;
+  transition-duration: $animation_duration;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -78,15 +120,15 @@
   top: 0;
 }
 
-.modal-project-content {
-  -webkit-transition-duration: 1s;
-  transition-duration: 1s;
-  margin: 20px 20%;
-  position: relative;
-}
-
 .modal-project.loading .modal-project-background {
   opacity: 0;
+}
+
+.modal-project-content {
+  -webkit-transition-duration: $animation_duration;
+  transition-duration: $animation_duration;
+  margin: 20px 15%;
+  position: relative;
 }
 
 .modal-project.loading .modal-project-content {
@@ -104,7 +146,7 @@
 
 #close_project {
   position: absolute;
-  margin: 10px;
+  margin: 25px;
 }
 
 // AUTOCOMPLETE
@@ -186,7 +228,12 @@
     overflow-x: visible;
   }
   .modal-project-content {
+    display: flex;
+    flex-direction: row-reverse;
     margin: 20px 5%;
+  }
+  #close_project {
+    margin-right: 25px;
   }
   #tag-filters {
     width: 100%;

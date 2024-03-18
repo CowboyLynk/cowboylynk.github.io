@@ -1,0 +1,48 @@
+<div class="hero is-small is-danger is-bold">
+    <div class="hero-body">
+        <nav class="columns is-vcentered">
+        <!-- Left side -->
+        <div class="column">
+            <div class="container">
+                <h1 class="title">Scribr</h1>
+                <h2 class="subtitle">
+                    Videos, but shorter.
+                </h2>
+                <div class="links">
+                    <a href="https://devpost.com/software/team-two-presents-scribr" target="_blank">
+                        <i class="fas fa-globe fa-md"></i>
+                        Devpost
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right side -->
+        <div class="column">
+            <figure class="image">
+            <img id="hero-image" src="images/scribr/cover.png">
+        </figure>
+        </div>
+        </nav>
+    </div>
+</div>
+<section class="section" id="project_info">
+    <div class="container">
+        <h2 class="subtitle is-4">About</h2>
+        <p>
+            At HackMIT 2018, three friends and I made a project called Scribr, and we won the largest cash prize at the hackathon. We call it Scribr. Scribr automatically simplifies videos for you. As a user, you upload a video of any length, and Scribr takes your video and returns a shorter version of the video with just the "highlights." It's a simple solution to a straightforward problem: videos are often too long, and it would be nice to have a quick summary of the video when you're short on time.
+        </p>
+        <p>
+            The obvious question is: how does Scribr decide what parts are the highlights? It decides by the audio. We first run the audio through Rev's text-to-speech system. Rev's system has automatic punctuation, which means it returns not just each spoken word, but also the periods at the ends of sentences. This enables us to split up the video at the sentence level. Then, with a list of sentences in hand, we rank the importance of each setence using a basic NLP alogrithm. Next, we take the sentences with the highest importance rank, and get the timestamps of when those sentences were said in the video. We then cut the video at beginning and ends of each time step. And finally, we return a single video to the user, with all of the important sentances stitched together.
+        </p>
+        <p>
+            You can find read more of the tech details — and see a demo — on the <a href="https://devpost.com/software/team-two-presents-scribr" target="_blank">Scribr project page.</a>
+            Scribr was created by Kenneth Friedman, Ike Urquhart, Nikhil Punwaney, and myself.
+        </p>
+
+        <h2 class="subtitle is-4">Screenshots</h2>
+        <figure class="image">
+            <img src="images/scribr/screenshot.png">
+        </figure>
+    </div>
+</section>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="Description" content="Hi, I'm Cowboy. I work as a software engineer at Google Geo in Seattle, WA. I am deeply interested in engineering but I also have a passion for the arts.">
+    <title>Cowboy Lynk</title>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity-fullscreen@1/fullscreen.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Kanit">
+    <script src="https://kit.fontawesome.com/f55cf00dfe.js" crossorigin="anonymous"></script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon_io/site.webmanifest">
+</head>
+<body>
+
+<!-- Title -->
+<section class="section" style="padding-bottom: 2rem">
+    <div class="container">
+        <div class="columns is-vcentered">
+            <div class="column">
+                <h1 class="title">
+                    <a class="title" href="index.html">COWBOY LYNK</a>
+                </h1>
+                <h2 class="subtitle">
+                    <a class="icon is-large" href="https://github.com/CowboyLynk" target="_blank">
+                        <i class="fab fa-github fa-lg"></i>
+                    </a>
+                    |
+                    <a class="icon is-large" href="https://www.linkedin.com/in/cowboylynk/" target="_blank">
+                        <i class="fab fa-linkedin fa-lg"></i>
+                    </a>
+                    |
+                    <a class="icon is-large" href="https://www.youtube.com/user/LynkFilms" target="_blank">
+                        <i class="fab fa-youtube fa-lg"></i>
+                    </a>
+                </h2>
+            </div>
+            <div class="column" id="menu-links">
+                <a onclick="navigateToProject('about')">+ ABOUT</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Cards -->
+<section class="section" style="padding-top: 0">
+    <div class="container">
+        <div class="tags is-vcentered" id="tag-filters">
+            <div class="autocomplete">
+                <input class="input" id="tagsInput" type="text" name="activeTags"
+                       placeholder="Enter tags (e.g. &quot;python&quot;)">
+            </div>
+        </div>
+        <div class="grid" id="project-grid"></div>
+    </div>
+</section>
+
+<!-- Card Template -->
+<template id="project-item-template">
+    <div class="element-item">
+        <div class="card">
+            <div class="card-image project-link">
+                <figure class="image is-4by3">
+                    <img id="cover-image" src="images/headshot.png"
+                         alt="Cowboy Lynk">
+                </figure>
+            </div>
+            <div class="card-content">
+                <div class="media">
+                    <div class="media-content">
+                        <p class="title is-4 project-link" id="project-title"></p>
+                        <div class="tags subtitle" id="tags">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<!-- Modal Popup -->
+<div class="modal-project loading">
+    <div class="modal-project-background"></div>
+    <div class="modal-project-content loading">
+        <a class="delete" id="close_project"></a>
+        <div id="project"></div>
+    </div>
+    </div>
+</div>
+
+<!-- load scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script src="https://unpkg.com/flickity-fullscreen@1/fullscreen.js"></script>
+<script src="js/autocomplete.js" charset="UTF-8"></script>
+<script src="js/main.js" charset="UTF-8"></script>
+<!-- end load scripts -->
+</body>
+</html>
