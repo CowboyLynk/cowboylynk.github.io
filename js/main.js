@@ -1,20 +1,32 @@
 let projects = [
     {
+        "name": "Co-Curate",
+        "pid": "cocurate",
+        "tags": ["Python", "Swift", "GCP"],
+        "category": "coding"
+    },
+    {
         "name": "Gazer",
         "pid": "gazer",
         "tags": ["Swift", "OpenCV", "ARKit"],
         "category": "coding"
     },
     {
-        "name": "Planit",
-        "pid": "planit",
-        "tags": ["Django", "Python", "Javascript"],
-        "category": "coding"
+        "name": "MIT Admissions",
+        "pid": "mitadmissions",
+        "tags": ["After Effects", "Blender", "C4D"],
+        "category": "film"
     },
     {
         "name": "MC Ray Tracer",
         "pid": "raytracer",
         "tags": ["C++"],
+        "category": "coding"
+    },
+    {
+        "name": "Planit",
+        "pid": "planit",
+        "tags": ["Django", "Python", "Javascript"],
         "category": "coding"
     },
     {
@@ -30,23 +42,23 @@ let projects = [
         "category": "coding"
     },
     {
-        "name": "The Word Game",
-        "pid": "thewordgame",
-        "tags": ["Swift", "Firebase"],
-        "category": "coding"
-    },
-    {
         "name": "Sisyphus Table",
         "pid": "sisyphus",
         "tags": ["Fusion 360", "C++"],
         "category": "coding"
     },
     {
-        "name": "MIT Admissions",
-        "pid": "mitadmissions",
-        "tags": ["After Effects", "Blender", "C4D"],
+        "name": "The Word Game",
+        "pid": "thewordgame",
+        "tags": ["Swift", "Firebase"],
         "category": "coding"
-    }
+    },
+    {
+        "name": "Pong Stat",
+        "pid": "pongstat",
+        "tags": ["Swift"],
+        "category": "coding"
+    },
 ];
 let allTags = new Set();
 let activeTags = [];

@@ -60,6 +60,9 @@
   align-items: center;
   justify-content: center;
 }
+.portrait .carousel-cell {
+  height: 600px;
+}
 .carousel-cell-image {
   display: block;
   max-height: 100%;

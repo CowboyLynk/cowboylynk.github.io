@@ -24,6 +24,46 @@
   color: $grey-dark;
 }
 
+// HOME PAGE
+$sedona-orange: #ffd9a3;
+$sunset-pink: #fea283;
+$primary-home: $sunset-pink;
+.home {
+  background-image: url("../photography/DSC01336-Pano.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+
+  -webkit-animation: fadein 2s ; /* Chrome, Safari, Opera */
+  animation: fadein 2s ;
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes fadein {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+/* Standard syntax */
+@keyframes fadein {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.home-text {
+  color: $sedona-orange;
+}
+
+.button.is-sedona {
+  border-color: $sedona-orange;
+  background-color: rgba(0, 0, 0, 0);
+  color: $sedona-orange
+}
+.button.is-sedona:hover {
+  border-color: $sedona-orange;
+  background-color: $sedona-orange;
+  color: rgba(0, 0, 0, 0.7)
+  
+}
+
 // GRID
 #project-grid {
   margin: 0 -6px 0 -6px;

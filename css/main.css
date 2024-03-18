@@ -77,6 +77,10 @@ body {
   justify-content: center;
 }
 
+.portrait .carousel-cell {
+  height: 600px;
+}
+
 .carousel-cell-image {
   display: block;
   max-height: 100%;
@@ -139,6 +143,49 @@ body {
 
 #menu-links a:hover {
   color: #4A4A4A;
+}
+
+.home {
+  background-image: url("../photography/DSC01336-Pano.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  -webkit-animation: fadein 2s; /* Chrome, Safari, Opera */
+  animation: fadein 2s;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Standard syntax */
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.home-text {
+  color: #ffd9a3;
+}
+
+.button.is-sedona {
+  border-color: #ffd9a3;
+  background-color: rgba(0, 0, 0, 0);
+  color: #ffd9a3;
+}
+
+.button.is-sedona:hover {
+  border-color: #ffd9a3;
+  background-color: #ffd9a3;
+  color: rgba(0, 0, 0, 0.7);
 }
 
 #project-grid {
