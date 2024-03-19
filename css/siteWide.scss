@@ -13,3 +13,7 @@ body {
   font-weight: 700;
   font-style: italic;
 }
+
+.fullheight {
+  height: 100vh;  max-height: -webkit-fill-available;
+}

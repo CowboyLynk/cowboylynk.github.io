@@ -32,7 +32,6 @@ $primary-home: $sunset-pink;
   background-image: url("../photography/DSC01336-Pano.jpg");
   background-size: cover;
   background-position: center;
-  height: 100vh;
 
   -webkit-animation: fadein 2s ; /* Chrome, Safari, Opera */
   animation: fadein 2s ;
@@ -147,6 +146,7 @@ $animation_duration: 0.5s;
 #close_project {
   position: absolute;
   margin: 25px;
+  z-index: 999;
 }
 
 // AUTOCOMPLETE

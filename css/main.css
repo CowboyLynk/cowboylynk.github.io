@@ -9,6 +9,11 @@ body {
   font-style: italic;
 }
 
+.fullheight {
+  height: 100vh;
+  max-height: -webkit-fill-available;
+}
+
 .hero.is-warning .links a {
   color: hsla(0, 0%, 0%, 0.8);
   opacity: 0.8;
@@ -149,7 +154,6 @@ body {
   background-image: url("../photography/DSC01336-Pano.jpg");
   background-size: cover;
   background-position: center;
-  height: 100vh;
   -webkit-animation: fadein 2s; /* Chrome, Safari, Opera */
   animation: fadein 2s;
 }
@@ -268,6 +272,7 @@ body {
 #close_project {
   position: absolute;
   margin: 25px;
+  z-index: 999;
 }
 
 #tag-filters {
