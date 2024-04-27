@@ -6,9 +6,9 @@
     <meta name="Description" content="Hi, I'm Cowboy. I work as a software engineer at Google Geo in Seattle, WA. I am deeply interested in engineering but I also have a passion for the arts.">
     <title>Cowboy Lynk</title>
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/flickity-fullscreen@2/fullscreen.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity-fullscreen@1/fullscreen.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/project.css">
+    <link rel="stylesheet" href="css/photography.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Kanit">
     <script src="https://kit.fontawesome.com/f55cf00dfe.js" crossorigin="anonymous"></script>
 
@@ -42,66 +42,32 @@
                 </h2>
             </div>
             <div class="column" id="menu-links">
-                <a href="photography.html">+ PHOTOGRAPHY</a>
-                <!-- <a onclick="navigateToProject('about')">+ ABOUT</a> -->
+                <a href="computer_projects.html">+ COMPUTER PROJECTS</a>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Cards -->
-<section class="section" style="padding-top: 0">
+<!-- Photo Grid -->
+<section class="section" style="padding-top: 0;">
     <div class="container">
-        <div class="tags is-vcentered" id="tag-filters">
-            <div class="autocomplete">
-                <input class="input" id="tagsInput" type="text" name="activeTags"
-                       placeholder="Enter tags (e.g. &quot;python&quot;)">
-            </div>
+        <div class="photo-row" style="background-image: linear-gradient(to bottom, rgba(255, 117, 11, 0.3), rgba(255, 233, 67, 0.3)), url('photography/sedona/DSC01171.jpg');">
+            <h1 class="title is-white" >Sedona</h1>
         </div>
-        <div class="grid" id="project-grid"></div>
-    </div>
+        <div class="photo-row" style="background-image: linear-gradient(to bottom, rgba(67, 255, 224, 0.3), rgba(11, 178, 255, 0.3)), url('photography/snow_lake/DSC00884_crop.jpg');">
+            <h1 class="title is-white">Snow Lake</h1>
+        </div>
+        <div class="photo-row" style="background-image: linear-gradient(to bottom, rgba(11, 255, 141, 0.3), rgba(230, 255, 67, 0.3)), url('photography/hawaii/DSC00306.jpg');">
+            <h1 class="title is-white">Hawaii</h1>
+        </div>
+        <div class="photo-row" style="background-image: linear-gradient(to bottom, rgba(255, 141, 11, 0.3), rgba(255, 67, 152, 0.3)), url('photography/tenzen/DSC01036.jpg');">
+            <h1 class="title is-white">Tenzen</h1>
+        </div>
+        <div class="photo-row" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(146, 146, 146, 0.3)), url('photography/bw/DSC01371.jpg');">
+            <h1 class="title is-white">Misc</h1>
+        </div>
+</div>
 </section>
 
-<!-- Card Template -->
-<template id="project-item-template">
-    <div class="element-item">
-        <div class="card">
-            <div class="card-image project-link">
-                <figure class="image is-4by3">
-                    <img id="cover-image" src="images/headshot.png"
-                         alt="Cowboy Lynk">
-                </figure>
-            </div>
-            <div class="card-content">
-                <div class="media">
-                    <div class="media-content">
-                        <p class="title is-4 project-link" id="project-title"></p>
-                        <div class="tags subtitle" id="tags">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</template>
-
-<!-- Modal Popup -->
-<div class="modal-project loading">
-    <div class="modal-project-background"></div>
-    <div class="modal-project-content loading">
-        <a class="delete" id="close_project"></a>
-        <div id="project"></div>
-    </div>
-    </div>
-</div>
-
-<!-- load scripts -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-<script src="https://unpkg.com/flickity-fullscreen@2/fullscreen.js"></script>
-<script src="js/autocomplete.js" charset="UTF-8"></script>
-<script src="js/main.js" charset="UTF-8"></script>
-<!-- end load scripts -->
 </body>
 </html>

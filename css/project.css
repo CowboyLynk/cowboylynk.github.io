@@ -1,0 +1,117 @@
+.hero.is-warning .links a {
+  color: hsla(0, 0%, 0%, 0.8);
+  opacity: 0.8;
+}
+
+.hero.is-warning .links a:hover {
+  opacity: 1;
+}
+
+.hero.is-light .links a {
+  color: hsla(0, 0%, 0%, 0.8);
+  opacity: 0.8;
+}
+
+.hero.is-light .links a:hover {
+  opacity: 1;
+}
+
+#hero-image {
+  border-radius: 10px;
+}
+
+.links a {
+  color: #fff;
+  opacity: 0.8;
+}
+
+.links a:hover {
+  opacity: 1;
+}
+
+#project_info {
+  padding: 24px;
+}
+
+#project_info p {
+  margin-bottom: 1em;
+}
+
+#project_info h2 {
+  margin-bottom: 0.2em;
+}
+
+.flickity-slider {
+  display: flex;
+}
+
+.flickity-page-dots {
+  bottom: 0.5rem;
+}
+
+.carousel {
+  background: #f7f7f7;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  border-radius: 4px;
+}
+
+.carousel-cell {
+  width: 100%;
+  height: 350px;
+  margin-right: 10px;
+  /* center images in cells with flexbox */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portrait .carousel-cell {
+  height: 600px;
+}
+
+.carousel-cell-image {
+  display: block;
+  max-height: 100%;
+}
+
+.carousel.is-fullscreen .carousel-cell {
+  height: 100%;
+}
+
+.carousel.is-fullscreen .carousel-cell-image {
+  max-width: 100%;
+}
+
+.flickity-button {
+  background: hsla(0, 0%, 40%, 0.3);
+}
+
+.flickity-button:hover {
+  background: hsla(0, 0%, 40%, 0.6);
+}
+
+.is-fullscreen .flickity-button {
+  background: hsla(0, 0%, 100%, 0.75);
+}
+
+.is-fullscreen .flickity-button:hover {
+  background: #fff;
+}
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*# sourceMappingURL=project.css.map */

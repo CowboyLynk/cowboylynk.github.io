@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta name="Description" content="Hi, I'm Cowboy. I work as a software engineer at Google Geo in Seattle, WA. I am deeply interested in engineering but I also have a passion for the arts.">
+    <meta name="Description"
+        content="Hi, I'm Cowboy. I work as a software engineer at Google Geo in Seattle, WA. I am deeply interested in engineering but I also have a passion for the arts.">
     <title>Cowboy Lynk</title>
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/flickity-fullscreen@1/fullscreen.css">
+    <link rel="stylesheet" href="packages/photoswipe/photoswipe.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/photography.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Kanit">
@@ -17,205 +18,223 @@
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">
     <link rel="manifest" href="images/favicon_io/site.webmanifest">
 </head>
+
 <body>
 
-<!-- Title -->
-<section class="section" style="padding-bottom: 2rem">
-    <div class="container">
-        <div class="columns is-vcentered">
-            <div class="column">
-                <h1 class="title">
-                    <a class="title" href="index.html">COWBOY LYNK</a>
-                </h1>
-                <h2 class="subtitle">
-                    <a class="icon is-large" href="https://github.com/CowboyLynk" target="_blank">
-                        <i class="fab fa-github fa-lg"></i>
-                    </a>
-                    |
-                    <a class="icon is-large" href="https://www.linkedin.com/in/cowboylynk/" target="_blank">
-                        <i class="fab fa-linkedin fa-lg"></i>
-                    </a>
-                    |
-                    <a class="icon is-large" href="https://www.youtube.com/user/LynkFilms" target="_blank">
-                        <i class="fab fa-youtube fa-lg"></i>
-                    </a>
-                </h2>
-            </div>
-            <div class="column" id="menu-links">
-                <a href="computer_projects.html">+ COMPUTER PROJECTS</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Photo Grid -->
-<section class="section" style="padding-top: 0">
-    <div class="container">
-        <h2 class="title is-4">Sedona</h2>
+    <!-- Title -->
+    <section class="section" style="padding-bottom: 2rem">
         <div class="container">
-            <div class="columns is-photo-grid">
-                <div class="column is-6">
-                    <figure class="image">
-                        <img src="photography/sedona/DSC01171.jpg" alt="Sedona" loading="lazy">
-                    </figure>
-                    <figure class="image">
-                        <img src="photography/sedona/DSC01225.jpg" alt="Sedona" loading="lazy">
-                    </figure>
-                    <figure class="image">
-                        <img src="photography/sedona/DSC01242.jpg" alt="Sedona" loading="lazy">
-                    </figure>
-                    <figure class="image">
-                        <img src="photography/sedona/DSC01228.jpg" alt="Sedona" loading="lazy">
-                    </figure>
-                </div>
+            <div class="columns is-vcentered">
                 <div class="column">
-                    <figure class="image">
-                        <img src="photography/sedona/DSC01336-Pano-2.jpg" alt="Sedona" loading="lazy">
-                    </figure>
-                    <figure class="image">
-                        <img src="photography/sedona/DSC01199.jpg" alt="Sedona" loading="lazy">
-                    </figure>
-                    <figure class="image">
-                        <img src="photography/sedona/DSC01234.jpg" alt="Sedona" loading="lazy">
-                    </figure>
+                    <h1 class="title">
+                        <a class="title" href="index.html">COWBOY LYNK</a>
+                    </h1>
+                    <h2 class="subtitle">
+                        <a class="icon is-large" href="https://github.com/CowboyLynk" target="_blank">
+                            <i class="fab fa-github fa-lg"></i>
+                        </a>
+                        |
+                        <a class="icon is-large" href="https://www.linkedin.com/in/cowboylynk/" target="_blank">
+                            <i class="fab fa-linkedin fa-lg"></i>
+                        </a>
+                        |
+                        <a class="icon is-large" href="https://www.youtube.com/user/LynkFilms" target="_blank">
+                            <i class="fab fa-youtube fa-lg"></i>
+                        </a>
+                    </h2>
+                </div>
+                <div class="column" id="menu-links">
+                    <a href="computer_projects.html">+ COMPUTER PROJECTS</a>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="section">
-    <div class="container">
-        <h2 class="title is-4">Snow Lake</h2>
-        <div class="container">
-            <div class="columns is-photo-grid">
-                <div class="column is-6">
-                    <figure class="image">
-                        <img src="photography/snow_lake/DSC00784.jpg" alt="Snow Lake" loading="lazy">
-                    </figure>
-                    <figure class="image">
-                        <img src="photography/snow_lake/DSC00884.jpg" alt="Snow Lake" loading="lazy">
-                    </figure>
-                    <figure class="image">
-                        <img src="photography/snow_lake/DSC00947.jpg" alt="Snow Lake" loading="lazy">
-                    </figure>
-                    <figure class="image">
-                        <img src="photography/snow_lake/DSC00957.jpg" alt="Snow Lake" loading="lazy">
-                    </figure>
-                </div>
-                <div class="column">
-                    <figure class="image">
-                        <img src="photography/snow_lake/DSC00786.jpg" alt="Snow Lake" loading="lazy">
-                    </figure>
-                    <figure class="image">
-                        <img src="photography/snow_lake/DSC00891.jpg" alt="Snow Lake" loading="lazy">
-                    </figure>
-                    <figure class="image">
-                        <img src="photography/snow_lake/DSC00955.jpg" alt="Snow Lake" loading="lazy">
-                    </figure>
+    <!-- Photo Grid -->
+    <div class="psqp-gallery" id="gallery">
+        <section class="section" style="padding-top: 0">
+            <div class="container">
+                <h2 class="title is-4">Sedona</h2>
+                <div class="container">
+                    <div class="columns is-photo-grid">
+                        <div class="column is-6">
+                            <a class="image">
+                                <img src="photography/sedona/DSC01171_7008x3701.jpg" alt="Sedona">
+                            </a>
+                            <a class="image">
+                                <img src="photography/sedona/DSC01242_2600x1930.jpg">
+                            </a>
+                            <a class="image">
+                                <img src="photography/sedona/DSC01228_2600x1733.jpg">
+                            </a>
+                        </div>
+                        <div class="column">
+                            <a class="image">
+                                <img src="photography/sedona/DSC01336-Pano-2_3800x2153.jpg">
+                            </a>
+                            <a class="image">
+                                <img src="photography/sedona/DSC01199_2600x1704.jpg">
+                            </a>
+                            <a class="image">
+                                <img src="photography/sedona/DSC01234_2600x1930.jpg">
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-<section class="section">
-    <div class="container">
-        <h2 class="title is-4">Hawaii</h2>
-        <div class="container">
-            <div class="columns is-photo-grid">
-                <div class="column is-6">
-                    <figure class="image">
-                        <img src="photography/hawaii/DSC00306.jpg" alt="Hawaii" loading="lazy">
-                    </figure>
-                    <figure class="image">
-                        <img src="photography/hawaii/DSC00574.jpg" alt="Hawaii" loading="lazy">
-                    </figure>
-                    <figure class="image">
-                        <img src="photography/hawaii/DSC00582.jpg" alt="Hawaii" loading="lazy">
-                    </figure>
-                </div>
-                <div class="column">
-                    <figure class="image">
-                        <img src="photography/hawaii/DSC00309-2.jpg" alt="Hawaii" loading="lazy">
-                    </figure>
-                    <figure class="image">
-                        <img src="photography/hawaii/DSC00577.jpg" alt="Hawaii" loading="lazy">
-                    </figure>
+        <section class="section">
+            <div class="container">
+                <h2 class="title is-4">Snow Lake</h2>
+                <div class="container">
+                    <div class="columns is-photo-grid">
+                        <div class="column is-6">
+                            <a class="image">
+                                <img src="photography/snow_lake/DSC00784_2600x1733.jpg">
+                            </a>
+                            <a class="image">
+                                <img src="photography/snow_lake/DSC00884_2600x1734.jpg">
+                            </a>
+                            <a class="image">
+                                <img src="photography/snow_lake/DSC00947_2600x1973.jpg">
+                            </a>
+                            <a class=" image">
+                                <img src="photography/snow_lake/DSC00957_2600x1405.jpg">
+                            </a>
+                        </div>
+                        <div class="column">
+                            <a class="image">
+                                <img src="photography/snow_lake/DSC00786_2600x2347.jpg">
+                            </a>
+                            <a class="image">
+                                <img src="photography/snow_lake/DSC00891_2600x1659.jpg">
+                            </a>
+                            <a class="image">
+                                <img src="photography/snow_lake/DSC00955_2600x1733.jpg">
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-<section class="section">
-    <div class="container">
-        <h2 class="title is-4">Tenzen</h2>
-        <div class="container">
-            <div class="columns is-photo-grid">
-                <div class="column is-6">
-                    <figure class="image">
-                        <img src="photography/tenzen/DSC01022.jpg" alt="Tenzen" loading="lazy">
-                    </figure>
-                    <figure class="image">
-                        <img src="photography/tenzen/DSC01014.jpg" alt="Tenzen" loading="lazy">
-                    </figure>
-                    <figure class="image">
-                        <img src="photography/tenzen/DSC01081.jpg" alt="Tenzen" loading="lazy">
-                    </figure>
-                </div>
-                <div class="column">
-                    <figure class="image">
-                        <img src="photography/tenzen/DSC01036.jpg" alt="Tenzen" loading="lazy">
-                    </figure>
-                    <figure class="image">
-                        <img src="photography/tenzen/DSC01079.jpg" alt="Tenzen" loading="lazy">
-                    </figure>
+        <section class="section">
+            <div class="container">
+                <h2 class="title is-4">Hawaii</h2>
+                <div class="container">
+                    <div class="columns is-photo-grid">
+                        <div class="column is-6">
+                            <a class="image">
+                                <img src="photography/hawaii/DSC00306_2600x1733.jpg">
+                            </a>
+                            <a class="image">
+                                <img src="photography/hawaii/DSC00574_2600x1580.jpg">
+                            </a>
+                            <a class="image">
+                                <img src="photography/hawaii/DSC00582_2600x1553.jpg">
+                            </a>
+                        </div>
+                        <div class="column">
+                            <a class="image">
+                                <img src="photography/hawaii/DSC00309-2_1733x2600.jpg">
+                            </a>
+                            <a class="image">
+                                <img src="photography/hawaii/DSC00577_2600x1733.jpg">
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-<!-- <section class="section">
-    <div class="container">
-        <h2 class="title is-4">Packwood</h2>
-        <div class="container">
-            <div class="columns is-photo-grid">
-                <div class="column is-6">
-                    <figure class="image">
-                        <img src="photography/packwood/IMG_1737.jpg" alt="Packwood" loading="lazy">
-                    </figure>
-                </div>
-                <div class="column">
-                    <figure class="image">
-                        <img src="photography/packwood/IMG_1344.jpg" alt="Packwood" loading="lazy">
-                    </figure>
+        <section class="section">
+            <div class="container">
+                <h2 class="title is-4">Tenzen</h2>
+                <div class="container">
+                    <div class="columns is-photo-grid">
+                        <div class="column is-6">
+                            <a class="image">
+                                <img src="photography/tenzen/DSC01079_2600x1733.jpg" alt="Tenzen" loading="lazy">
+                            </a>
+                            <a class="image">
+                                <img src="photography/tenzen/DSC01081_2600x1659.jpg" alt="Tenzen" loading="lazy">
+                            </a>
+                        </div>
+                        <div class="column">
+                            <a class="image">
+                                <img src="photography/tenzen/DSC01036_2600x1950.jpg" alt="Tenzen" loading="lazy">
+                            </a>
+                            <a class="image">
+                                <img src="photography/tenzen/DSC01022_3800x1896.jpg" alt="Tenzen" loading="lazy">
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section> -->
+        </section>
 
-<section class="section">
-    <div class="container">
-        <h2 class="title is-4">B/W</h2>
-        <div class="container">
-            <div class="columns is-photo-grid">
-                <div class="column is-6">
-                    <figure class="image">
-                        <img src="photography/bw/DSC01371.jpg" alt="B/W" loading="lazy">
-                    </figure>
-                </div>
-                <div class="column">
-                    <figure class="image">
-                        <img src="photography/bw/DSC01375.jpg" alt="B/W" loading="lazy">
-                    </figure>
+        <section class="section">
+            <div class="container">
+                <h2 class="title is-4">Misc</h2>
+                <div class="container">
+                    <div class="columns is-photo-grid">
+                        <div class="column is-6">
+                            <a class="image">
+                                <img src="photography/bw/DSC01371_2600x1400.jpg">
+                            </a>
+                        </div>
+                        <div class="column is-6">
+                            <a class="image">
+                                <img src="photography/packwood/IMG_1737_2600x1681.jpg">
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
-</section>
 
+    <!-- load scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="module">
+        import PhotoSwipeLightbox from './packages/photoswipe/photoswipe-lightbox.esm.js';
+
+        // Add image sizes
+        $('.image').each(function () {
+            const a = $(this)
+            const imgSrc = $(this).find('img').attr('src');
+
+            // Extract dimensions from image URL
+            const dimensionsMatch = imgSrc.match(/_(\d+)x(\d+)\./);
+            if (dimensionsMatch) {
+                const width = parseInt(dimensionsMatch[1], 10);
+                const height = parseInt(dimensionsMatch[2], 10);
+                a.attr('data-pswp-src', imgSrc);
+                a.attr('data-pswp-width', width);
+                a.attr('data-pswp-height', height);
+            } else {
+                console.warn(`Dimensions not found in URL for image: ${imgSrc}`);
+            }
+        });
+
+        const lightbox = new PhotoSwipeLightbox({
+            gallery: '#gallery',
+            children: 'a',
+            pswpModule: () => import('./packages/photoswipe/photoswipe.esm.js'),
+            paddingFn: (viewportSize, itemData, index) => {
+                let padding = viewportSize.x * 0.05
+                return {
+                    top: padding,
+                    bottom: padding,
+                    left: padding,
+                    right: padding
+                };
+            },
+        });
+        lightbox.init();
+    </script>
+    <!-- end load scripts -->
 </body>
+
 </html>

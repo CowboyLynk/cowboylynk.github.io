@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta name="Description" content="Hi, I'm Cowboy. I work as a software engineer at Google Geo in Seattle, WA. I am deeply interested in engineering but I also have a passion for the arts.">
+    <meta name="Description"
+        content="Hi, I'm Cowboy. I work as a software engineer at Google Geo in Seattle, WA. I am deeply interested in engineering but I also have a passion for the arts.">
     <title>Cowboy Lynk</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Kanit">
@@ -19,50 +21,53 @@
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">
     <link rel="manifest" href="images/favicon_io/site.webmanifest">
 </head>
+
 <body>
 
-<section id="hero" class="hero home fullheight">
-    <div class="hero-body"></div>
-    <div class="hero-foot">
-        <div class="container has-text-centered" style="padding-bottom: 2em;">
-            <div class="level">
-                <div class="level-left">
-                    <h1 class="title home-text">COWBOY LYNK</h1>
-                </div>
-                <div class="level-right">
-                    <div class="columns">
-                        <div class="column">
-                            <a href="photography.html" class="button is-outlined is-sedona">Photography</a>
-                        </div>
-                        <div class="column">
-                            <a href="computer_projects.html" class="button is-outlined is-sedona">Computer projects</a>
+    <section id="hero" class="hero home fullheight">
+        <div class="hero-body"></div>
+        <div class="hero-foot">
+            <div class="container has-text-centered" style="padding-bottom: 2em;">
+                <div class="level">
+                    <div class="level-left">
+                        <h1 class="title home-text">COWBOY LYNK</h1>
+                    </div>
+                    <div class="level-right">
+                        <div class="columns">
+                            <div class="column">
+                                <a href="photography.html" class="button is-outlined is-sedona">Photography</a>
+                            </div>
+                            <div class="column">
+                                <a href="computer_projects.html" class="button is-outlined is-sedona">Computer
+                                    projects</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<script>
-    const images = [
-      "url('photography/hawaii/DSC00306.jpg')",  // HI, cliff
-      "url('photography/hawaii/DSC00577.jpg')",  // HI, sunset
-      "url('photography/snow_lake/DSC00957.jpg')",  // Snow Lake, Salome and Rio
-      "url('photography/tenzen/DSC01022.jpg')",  // Tenzen, sunset
-      "url('photography/tenzen/DSC01036.jpg')",  // Tenzen, Salome
-      "url('photography/tenzen/DSC01079.jpg')",  // Tenzen, stars
-      "url('photography/sedona/DSC01171.jpg')",  // Sedona, sunset
-      "url('photography/sedona/DSC01234.jpg')",  // Sedona, Daniel cave
-      "url('photography/sedona/DSC01336-Pano-2.jpg')",  // Sedona stars
-    ];
-  
-    function randomBackground() {
-        const randomIndex = Math.floor(Math.random() * images.length);
-        document.getElementById("hero").style.backgroundImage = images[randomIndex];
-    }
-  
-    randomBackground()
-  </script>
+    <script>
+        const images = [
+            "url('photography/hawaii/DSC00306_2600x1733.jpg')",  // HI, cliff
+            "url('photography/hawaii/DSC00574_2600x1580.jpg')",  // HI, sunset
+            "url('photography/snow_lake/DSC00957_2600x1405.jpg')",  // Snow Lake, Salome and Rio
+            "url('photography/tenzen/DSC01022_3800x1896.jpg')",  // Tenzen, sunset
+            "url('photography/tenzen/DSC01036_2600x1950.jpg')",  // Tenzen, Salome
+            "url('photography/tenzen/DSC01079_2600x1733.jpg')",  // Tenzen, stars
+            "url('photography/sedona/DSC01171_7008x3701.jpg')",  // Sedona, sunset
+            "url('photography/sedona/DSC01234_2600x1930.jpg')",  // Sedona, Daniel cave
+            "url('photography/sedona/DSC01336-Pano-2_3800x2153.jpg')",  // Sedona stars
+        ];
+
+        function randomBackground() {
+            const randomIndex = Math.floor(Math.random() * images.length);
+            document.getElementById("hero").style.backgroundImage = images[randomIndex];
+        }
+
+        randomBackground()
+    </script>
 </body>
+
 </html>
