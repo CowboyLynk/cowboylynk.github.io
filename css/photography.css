@@ -3,11 +3,15 @@
 }
 
 .gutter-sizer {
-  width: 10px;
+  width: 12px;
 }
 
 .grid-item {
-  width: calc(50% - 10px);
+  width: calc(50% - 6px);
+}
+
+.grid-item.one-third {
+  width: calc(33% - 4px);
 }
 
 .grid-item.full-width {
