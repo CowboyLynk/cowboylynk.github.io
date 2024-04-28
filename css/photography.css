@@ -1,9 +1,17 @@
-.is-photo-grid .column {
-  padding: 0;
+.pswp__bg {
+  background: hsla(0, 0%, 100%, 0.95);
 }
 
-.columns .image {
-  padding: 0.75rem;
+.gutter-sizer {
+  width: 10px;
+}
+
+.grid-item {
+  width: calc(50% - 10px);
+}
+
+.grid-item.full-width {
+  width: 100%;
 }
 
 .is-white {
@@ -37,10 +45,6 @@
 
 .photo-row:hover {
   height: 170px;
-}
-
-.pswp__bg {
-  background: hsla(0, 0%, 100%, 0.95);
 }
 
 /*# sourceMappingURL=photography.css.map */
