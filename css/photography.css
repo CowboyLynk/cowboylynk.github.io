@@ -2,22 +2,6 @@
   background: #fff;
 }
 
-.gutter-sizer {
-  width: 12px;
-}
-
-.grid-item {
-  width: calc(50% - 6px);
-}
-
-.grid-item.one-third {
-  width: calc(33% - 4px);
-}
-
-.grid-item.full-width {
-  width: 100%;
-}
-
 .is-white {
   color: white;
 }
