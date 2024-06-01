@@ -2,6 +2,10 @@
   background: #fff;
 }
 
+.image {
+  background-color: rgb(217, 217, 217);
+}
+
 .is-white {
   color: white;
 }

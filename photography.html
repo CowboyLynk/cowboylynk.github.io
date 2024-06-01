@@ -179,6 +179,7 @@
                 a.attr('data-pswp-src', imgSrc);
                 a.attr('data-pswp-width', width);
                 a.attr('data-pswp-height', height);
+                a.css('aspect-ratio', `${width / height}`);
             } else {
                 console.warn(`Dimensions not found in URL for image: ${imgSrc}`);
             }
