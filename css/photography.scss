@@ -6,6 +6,30 @@
     background-color: rgb(217, 217, 217);
 }
 
+.stacked-images {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.stacked-images .image {
+    margin-bottom: 1.5rem;
+}
+
+.stacked-images .image:last-child {
+    margin-bottom: 0;
+}
+
+.cropped-image-container {
+    height: 100%;
+}
+
+.cropped-image-container img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
 // START experimental photo-columns
 
 .is-white {
