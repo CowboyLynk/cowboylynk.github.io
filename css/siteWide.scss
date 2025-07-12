@@ -5,15 +5,16 @@ $grey: #7A7A7A;
 $grey-dark: #4A4A4A;
 
 body {
-  font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .title {
-  font-family: 'Kanit', sans-serif;
-  font-weight: 700;
-  font-style: italic;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 700;
+    font-style: italic;
 }
 
 .fullheight {
-  height: 100vh;  max-height: -webkit-fill-available;
+    height: 100vh;
+    max-height: -webkit-fill-available;
 }
