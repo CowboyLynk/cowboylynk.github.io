@@ -1,5 +1,21 @@
 .pswp__bg {
-    background: #fff;
+    background: #000;
+}
+
+
+.pswp__img:not(.pswp__img--placeholder) {
+    box-shadow: 0 0 0 1.5rem white;
+    animation: fadeInBorder 0.2s ease-in-out;
+}
+
+@keyframes fadeInBorder {
+    from {
+        box-shadow: 0 0 0 0rem rgba(255, 255, 255, 0);
+    }
+
+    to {
+        box-shadow: 0 0 0 1.5rem rgba(255, 255, 255, 1);
+    }
 }
 
 .image {

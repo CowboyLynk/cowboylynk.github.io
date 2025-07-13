@@ -12,10 +12,9 @@
     box-shadow: 0 0 0 0rem rgba(255, 255, 255, 0);
   }
   to {
-    box-shadow: 0 0 0 1.5rem rgba(255, 255, 255, 1);
+    box-shadow: 0 0 0 1.5rem rgb(255, 255, 255);
   }
 }
-
 .image {
   background-color: rgb(217, 217, 217);
 }
